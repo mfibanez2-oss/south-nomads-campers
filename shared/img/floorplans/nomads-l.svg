@@ -1,0 +1,49 @@
+<svg viewBox="0 0 320 620" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif">
+  <!-- Shell: top-down schematic of the Nomads L camper box. Draft pending owner confirmation of exact bed-conversion mechanism, water/fridge placement, and base vehicle (see docs/content-editing-guide.md). -->
+  <rect x="20" y="16" width="280" height="588" rx="26" fill="#eef4f7" stroke="#1a4723" stroke-width="4"/>
+
+  <!-- Rear entry door indicator (bottom) -->
+  <rect x="120" y="592" width="80" height="10" rx="4" fill="#98bed3"/>
+  <path d="M120 592 A 80 80 0 0 1 200 592" fill="none" stroke="#98bed3" stroke-width="2" stroke-dasharray="4 4"/>
+
+  <!-- Overhead cabinet storage strip (top wall) -->
+  <rect x="36" y="32" width="248" height="34" rx="8" fill="#d79051" fill-opacity="0.18" stroke="#d79051" stroke-width="2"/>
+  <circle cx="60" cy="49" r="13" fill="#ffffff" stroke="#1a4723" stroke-width="2"/>
+  <text x="60" y="54" text-anchor="middle" font-size="14" fill="#1a4723" font-weight="700">1</text>
+
+  <!-- Kitchenette: sink + 2-burner stove, near the entry -->
+  <g>
+    <rect x="36" y="430" width="90" height="150" rx="10" fill="#ffffff" stroke="#1a4723" stroke-width="3"/>
+    <circle cx="70" cy="470" r="16" fill="#98bed3" stroke="#1a4723" stroke-width="2"/>
+    <circle cx="70" cy="520" r="10" fill="#eef4f7" stroke="#1a4723" stroke-width="2"/>
+    <circle cx="95" cy="520" r="10" fill="#eef4f7" stroke="#1a4723" stroke-width="2"/>
+    <circle cx="30" cy="450" r="13" fill="#ffffff" stroke="#1a4723" stroke-width="2"/>
+    <text x="30" y="455" text-anchor="middle" font-size="14" fill="#1a4723" font-weight="700">2</text>
+  </g>
+
+  <!-- Fridge -->
+  <g>
+    <rect x="184" y="430" width="60" height="150" rx="10" fill="#ffffff" stroke="#1a4723" stroke-width="3"/>
+    <line x1="184" y1="500" x2="244" y2="500" stroke="#1a4723" stroke-width="2"/>
+    <circle cx="264" cy="450" r="13" fill="#ffffff" stroke="#1a4723" stroke-width="2"/>
+    <text x="264" y="455" text-anchor="middle" font-size="14" fill="#1a4723" font-weight="700">3</text>
+  </g>
+
+  <!-- DAY MODE: facing dinette benches + table -->
+  <g class="mode-day">
+    <rect x="36" y="120" width="80" height="260" rx="14" fill="#ffffff" stroke="#1a4723" stroke-width="3"/>
+    <rect x="204" y="120" width="80" height="260" rx="14" fill="#ffffff" stroke="#1a4723" stroke-width="3"/>
+    <rect x="128" y="200" width="64" height="100" rx="8" fill="#d79051" fill-opacity="0.25" stroke="#d79051" stroke-width="2.5"/>
+    <circle cx="160" cy="120" r="13" fill="#ffffff" stroke="#1a4723" stroke-width="2"/>
+    <text x="160" y="125" text-anchor="middle" font-size="14" fill="#1a4723" font-weight="700">4</text>
+  </g>
+
+  <!-- NIGHT MODE: table drops to form a double bed across both benches -->
+  <g class="mode-night">
+    <rect x="36" y="120" width="248" height="260" rx="16" fill="#ffffff" stroke="#1a4723" stroke-width="3"/>
+    <rect x="52" y="136" width="216" height="228" rx="10" fill="#98bed3" fill-opacity="0.25" stroke="#98bed3" stroke-width="2"/>
+    <line x1="160" y1="136" x2="160" y2="364" stroke="#98bed3" stroke-width="2" stroke-dasharray="6 6"/>
+    <circle cx="160" cy="120" r="13" fill="#ffffff" stroke="#1a4723" stroke-width="2"/>
+    <text x="160" y="125" text-anchor="middle" font-size="14" fill="#1a4723" font-weight="700">4</text>
+  </g>
+</svg>

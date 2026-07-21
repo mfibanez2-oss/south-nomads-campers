@@ -1,0 +1,92 @@
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  color: var(--color-ink);
+  background: var(--color-white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0 0 var(--space-2);
+  color: var(--color-forest-dark);
+}
+
+h1 { font-size: var(--text-hero); }
+h2 { font-size: var(--text-h1); }
+h3 { font-size: var(--text-h2); }
+h4 { font-size: var(--text-h3); }
+
+p { margin: 0 0 var(--space-2); color: var(--color-ink); }
+p.lead { font-size: 1.15rem; color: var(--color-muted); }
+
+a { color: var(--color-forest); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+ul { margin: 0; padding: 0; list-style: none; }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}
+
+section { padding: var(--space-6) 0; }
+section.tight { padding: var(--space-4) 0; }
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--text-small);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ember-dark);
+  margin-bottom: var(--space-1);
+}
+
+.section-head { max-width: 640px; margin: 0 0 var(--space-5); }
+.section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+
+.grid {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.grid-4 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+
+.split-section {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: var(--space-4);
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .split-section { grid-template-columns: 1fr; }
+}
+.split-section.reverse > *:first-child { order: 2; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  section { padding: var(--space-5) 0; }
+  .container { padding: 0 var(--space-2); }
+}

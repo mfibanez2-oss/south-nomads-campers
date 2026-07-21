@@ -1,0 +1,42 @@
+[
+  {
+    "id": "leonie-austria",
+    "name": "Leonie",
+    "location": "Austria",
+    "rating": 5,
+    "featured": true,
+    "quote": "Tuvimos un viaje increíble por la Carretera Austral con esta acogedora casa rodante. Josefina y Rodrigo son muy amables y serviciales, ¡quedamos felices con todo! El vehículo se sintió confiable y fácil de manejar, y todo es súper cómodo y práctico. Josefina y Rodrigo se aseguraron de que la camper viniera con todos los utensilios necesarios para un roadtrip cómodo de 10 días. ¡Recomendamos mucho esta empresa!",
+    "google_url": "https://maps.app.goo.gl/jBb2P5DYX9F9nXkW6",
+    "source": "google"
+  },
+  {
+    "id": "josse-netherlands",
+    "name": "Josse",
+    "location": "Países Bajos",
+    "rating": 5,
+    "featured": true,
+    "quote": "Gente muy amable, contacto personal y buen servicio. Tuvimos un tiempo increíble en Chile con nuestra camper 4x4. Cuando necesitamos ayuda, respondieron de inmediato. ¡Recomiendo totalmente arrendar una camper aquí!",
+    "google_url": "https://maps.app.goo.gl/rgsvKvvsyi4yf412A",
+    "source": "google"
+  },
+  {
+    "id": "rhys-canada",
+    "name": "Rhys",
+    "location": "Canadá",
+    "rating": 5,
+    "featured": true,
+    "quote": "¡Josefina y Rodrigo son lo mejor! Una pareja muy amable y servicial. Era nuestra primera vez en Chile y ambos nos hicieron sentir bienvenidos. La camper fue muy fácil de usar y estaba muy bien equipada para cualquier aventura que se te ocurra en Chile. ¡Gracias de nuevo, South Nomads!",
+    "google_url": "https://maps.app.goo.gl/6G9NK6nnrMfx81R68",
+    "source": "google"
+  },
+  {
+    "id": "andreas-germany",
+    "name": "Andreas",
+    "location": "Alemania",
+    "rating": 5,
+    "featured": false,
+    "quote": "Súper buena experiencia. Muy flexibles con la fecha porque llegamos un día antes de la vuelta y no hubo ningún problema. Muy interesados en el feedback para perfeccionar el servicio. Son una pareja muy amable.",
+    "google_url": "https://maps.app.goo.gl/EcaUVnVBjX1MGQRG8",
+    "source": "google"
+  }
+]

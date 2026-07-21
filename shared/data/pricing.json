@@ -1,0 +1,38 @@
+{
+  "currency_base": "USD",
+  "deposit_percent": 0.5,
+  "long_trip_threshold_days": 15,
+  "fallback_clp_rate": 950,
+  "exchange_rate_api": "https://api.exchangerate-api.com/v4/latest/USD",
+  "sumup_general_link": "https://pay.sumup.com/b2c/Q0Z2DE77",
+  "seasons": {
+    "high": { "months": [11, 12, 1, 2, 3], "label_en": "High Season", "label_es": "Temporada Alta" },
+    "mid":  { "months": [4, 9, 10],        "label_en": "Mid Season",  "label_es": "Temporada Media" },
+    "low":  { "months": [5, 6, 7, 8],      "label_en": "Low Season",  "label_es": "Temporada Baja" }
+  },
+  "models": {
+    "nomads-l": {
+      "name": "Nomads L",
+      "tagline_en": "Patagonia Comfort — sleeps up to 4",
+      "tagline_es": "Patagonia Comfort — hasta 4 personas",
+      "sumup_link": "https://pay.sumup.com/b2c/Q6CUILY0",
+      "rates": {
+        "high": { "under_threshold_per_day": 280, "over_threshold_per_day": 250 },
+        "mid":  { "under_threshold_per_day": 210, "over_threshold_per_day": 190 },
+        "low":  { "under_threshold_per_day": 176, "over_threshold_per_day": 157 }
+      }
+    },
+    "nomads-m": {
+      "name": "Nomads M",
+      "tagline_en": "For 2 Travelers",
+      "tagline_es": "Para 2 viajeros",
+      "sumup_link": "https://pay.sumup.com/b2c/QKAADWJO",
+      "rates": {
+        "high": { "under_threshold_per_day": 250, "over_threshold_per_day": 230 },
+        "mid":  { "under_threshold_per_day": 200, "over_threshold_per_day": 180 },
+        "low":  { "under_threshold_per_day": 170, "over_threshold_per_day": 150 }
+      }
+    }
+  },
+  "day_presets": [7, 10, 14, 15, 21, 28]
+}

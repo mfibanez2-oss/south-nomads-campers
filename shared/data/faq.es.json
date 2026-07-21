@@ -1,0 +1,83 @@
+[
+  {
+    "category": "Reservas y Pagos",
+    "items": [
+      {
+        "q": "¿Cómo funciona el proceso de reserva?",
+        "a": "<ul><li>Elige tu camper y las fechas de viaje</li><li>Te enviamos una cotización</li><li>Confirmas con un <strong>depósito del 50%</strong></li></ul><p>El saldo restante se paga antes del retiro.</p>"
+      },
+      {
+        "q": "¿Ofrecen descuentos por arriendos largos?",
+        "a": "<p>¡Sí! Ofrecemos tarifas diarias reducidas para roadtrips de 15 días o más — revisa la calculadora en la página de cada camper para ver el precio exacto.</p>"
+      },
+      {
+        "q": "¿Qué métodos de pago aceptan?",
+        "a": "<p>Aceptamos transferencias bancarias internacionales y tarjetas de crédito vía SumUp. Los pagos con tarjeta tienen un recargo del 3%.</p>"
+      },
+      {
+        "q": "¿Necesito dejar un depósito de garantía?",
+        "a": "<p>Sí. El día de la entrega se debe pagar un depósito de garantía de <strong>CLP $1.500.000</strong> (tarjeta, transferencia, PayPal o efectivo). Se devuelve dentro de 48 horas después de que la camper es devuelta en las mismas condiciones, con el estanque lleno. Para arriendos que incluyen cruce a Argentina, el depósito de garantía es de <strong>CLP $2.000.000</strong>.</p>"
+      }
+    ]
+  },
+  {
+    "category": "Retiro y Devolución",
+    "items": [
+      {
+        "q": "¿Dónde puedo retirar la camper?",
+        "a": "<p>Nuestra base principal es <strong>Puerto Varas</strong>, sur de Chile. También coordinamos retiro o devolución en el Aeropuerto de Puerto Montt, Coyhaique o Puerto Natales con un costo adicional.</p>"
+      },
+      {
+        "q": "¿Cuáles son los horarios de retiro y devolución?",
+        "a": "<p>Los retiros están disponibles entre las <strong>10:00 y las 17:00</strong>. Las devoluciones deben completarse antes de las <strong>16:00</strong>. Cada retiro incluye una inducción completa de la camper.</p>"
+      }
+    ]
+  },
+  {
+    "category": "Manejando en la Patagonia",
+    "items": [
+      {
+        "q": "¿Necesito una licencia especial?",
+        "a": "<p>Basta con una licencia de conducir regular. Debes tener al menos <strong>25 años</strong> y sentirte cómodo manejando transmisión manual.</p>"
+      },
+      {
+        "q": "¿Puedo manejar la Carretera Austral con sus campers?",
+        "a": "<p>Por supuesto. Nuestras camper trucks 4x4 están construidas para los caminos de la Patagonia, tramos de ripio y viajes remotos por el sur de Chile — ideales para un roadtrip por la Carretera Austral.</p>"
+      },
+      {
+        "q": "¿Puedo cruzar a Argentina?",
+        "a": "<p>Sí. El cruce a Argentina está permitido con los documentos correspondientes (los coordinamos con tu reserva) y el depósito de garantía mayor de CLP $2.000.000.</p>"
+      }
+    ]
+  },
+  {
+    "category": "Las Campers",
+    "items": [
+      {
+        "q": "¿Qué incluye la camper por dentro?",
+        "a": "<p>Cada arriendo incluye:</p><ul><li>Cama y ropa de cama</li><li>Equipamiento de cocina</li><li>Refrigerador y cocina a gas</li><li>Mesa y sillas para exterior</li><li>Sistema de energía solar</li><li>Calefactor a diésel</li></ul>"
+      },
+      {
+        "q": "¿Ofrecen internet o Starlink?",
+        "a": "<p>Sí. El arriendo opcional de <strong>Starlink</strong> está disponible para quienes necesitan internet confiable en zonas remotas de la Patagonia.</p>"
+      }
+    ]
+  },
+  {
+    "category": "Seguro y Soporte",
+    "items": [
+      {
+        "q": "¿Cómo funciona el seguro?",
+        "a": "<p>El seguro está incluido en el arriendo de tu camper en Chile. El deducible es de aproximadamente <strong>1.000 EUR</strong>.</p>"
+      },
+      {
+        "q": "¿Qué pasa si necesito ayuda durante el viaje?",
+        "a": "<p>Damos soporte directo durante tu viaje por la Patagonia. Si necesitas consejos de ruta, ayuda mecánica o asistencia en el camino, escríbenos en cualquier momento por WhatsApp.</p>"
+      },
+      {
+        "q": "¿Debo devolver la camper limpia?",
+        "a": "<p>Checklist de devolución:</p><ul><li>Interior y exterior limpios (cargo de hasta CLP $150.000 si no)</li><li>Estanque de combustible lleno — el faltante se cobra a CLP $2.500/litro</li><li>Baño portátil vacío y limpio (cargo de hasta CLP $300.000 si no)</li><li>Todo el equipamiento completo y sin daños según el inventario</li><li>Documentos del vehículo devueltos a South Nomads Campers</li></ul>"
+      }
+    ]
+  }
+]

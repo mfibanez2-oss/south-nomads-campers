@@ -1,0 +1,42 @@
+:root {
+  /* Brand colors */
+  --color-forest: #1a4723;
+  --color-forest-dark: #123318;
+  --color-blue: #98bed3;
+  --color-ice: #eef4f7;
+  --color-ember: #d79051;
+  --color-ember-dark: #c4823e;
+  --color-ink: #1a1a1a;
+  --color-muted: #6f6f6b;
+  --color-border: #e8e8e5;
+  --color-white: #ffffff;
+
+  /* Typography */
+  --font-display: 'Epilogue', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --text-hero: clamp(2rem, 7vw, 3.6rem);
+  --text-h1: clamp(1.75rem, 5vw, 2.75rem);
+  --text-h2: clamp(1.4rem, 3.5vw, 2rem);
+  --text-h3: clamp(1.15rem, 2.5vw, 1.5rem);
+  --text-body: 1rem;
+  --text-small: 0.875rem;
+
+  /* Spacing (8px base grid) */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+  --space-7: 96px;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  --max-width: 1200px;
+  --shadow-soft: 0 8px 30px rgba(26, 71, 35, 0.08);
+  --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.06);
+}

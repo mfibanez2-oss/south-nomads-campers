@@ -1,0 +1,83 @@
+[
+  {
+    "category": "Booking & Payments",
+    "items": [
+      {
+        "q": "How does the booking process work?",
+        "a": "<ul><li>Choose your camper and travel dates</li><li>We send you a quote</li><li>Confirm with a <strong>50% deposit</strong></li></ul><p>The remaining balance is paid before pickup.</p>"
+      },
+      {
+        "q": "Do you offer discounts for long rentals?",
+        "a": "<p>Yes! We offer reduced daily rates for longer Patagonia roadtrips of 15 days or more — see the calculator on each camper's page for exact pricing.</p>"
+      },
+      {
+        "q": "What payment methods do you accept?",
+        "a": "<p>We accept international bank transfers and major credit cards via SumUp. Credit card payments include a 3% processing fee.</p>"
+      },
+      {
+        "q": "Do I need a security deposit?",
+        "a": "<p>Yes. On the day of delivery, a security deposit of <strong>CLP $1,500,000</strong> is required (credit card, transfer, PayPal or cash). It's refunded within 48 hours after the camper is returned in the same condition, with a full tank. For rentals that include travel through Argentina, the security deposit is <strong>CLP $2,000,000</strong>.</p>"
+      }
+    ]
+  },
+  {
+    "category": "Pickup & Drop-off",
+    "items": [
+      {
+        "q": "Where can I pick up the camper?",
+        "a": "<p>Our main hub is <strong>Puerto Varas</strong>, southern Chile. We can also coordinate pickup or drop-off at Puerto Montt Airport, Coyhaique, or Puerto Natales for an additional fee.</p>"
+      },
+      {
+        "q": "What are the pickup and return times?",
+        "a": "<p>Pickups are available between <strong>10 AM and 5 PM</strong>. Returns must be completed before <strong>4 PM</strong>. Every pickup includes a full camper walkthrough.</p>"
+      }
+    ]
+  },
+  {
+    "category": "Driving in Patagonia",
+    "items": [
+      {
+        "q": "Do I need a special driver's license?",
+        "a": "<p>A regular driver's license is enough. You must be at least <strong>25 years old</strong> and comfortable driving a manual transmission.</p>"
+      },
+      {
+        "q": "Can I drive the Carretera Austral with your campers?",
+        "a": "<p>Absolutely. Our 4x4 camper trucks are built for Patagonia roads, gravel sections and remote travel across southern Chile — ideal for a Carretera Austral roadtrip.</p>"
+      },
+      {
+        "q": "Can I cross into Argentina?",
+        "a": "<p>Yes. Border crossings into Argentina are allowed with the correct paperwork (arranged with your booking) and the higher CLP $2,000,000 security deposit.</p>"
+      }
+    ]
+  },
+  {
+    "category": "The Campers",
+    "items": [
+      {
+        "q": "What is included inside the camper?",
+        "a": "<p>Each camper rental includes:</p><ul><li>Bed and bedding</li><li>Kitchen equipment</li><li>Fridge and gas stove</li><li>Outdoor table and chairs</li><li>Solar power system</li><li>Diesel heater</li></ul>"
+      },
+      {
+        "q": "Do you offer internet or Starlink?",
+        "a": "<p>Yes. Optional <strong>Starlink rental</strong> is available for travelers who need reliable internet in remote Patagonia areas.</p>"
+      }
+    ]
+  },
+  {
+    "category": "Insurance & Support",
+    "items": [
+      {
+        "q": "How does insurance work?",
+        "a": "<p>Insurance is included with your camper rental in Chile. The deductible is approximately <strong>1,000 EUR</strong>.</p>"
+      },
+      {
+        "q": "What happens if I need help during the trip?",
+        "a": "<p>We provide direct support during your Patagonia trip. If you need route advice, mechanical help or roadside assistance, contact us anytime by WhatsApp.</p>"
+      },
+      {
+        "q": "Do I need to return the camper clean?",
+        "a": "<p>Return checklist:</p><ul><li>Interior &amp; exterior clean (fee up to CLP $150,000 if not)</li><li>Full fuel tank — missing fuel charged at CLP $2,500/liter</li><li>Portable toilet emptied and clean (fee up to CLP $300,000 if not)</li><li>All equipment complete and undamaged per the inventory list</li><li>Vehicle documents returned to South Nomads Campers</li></ul>"
+      }
+    ]
+  }
+]

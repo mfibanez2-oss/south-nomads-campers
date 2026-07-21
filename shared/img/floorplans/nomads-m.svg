@@ -1,0 +1,47 @@
+<svg viewBox="0 0 280 520" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif">
+  <!-- Shell: top-down schematic of the Nomads M camper box. Draft pending owner confirmation of exact bed-conversion mechanism, water/fridge placement, and base vehicle (see docs/content-editing-guide.md). -->
+  <rect x="18" y="14" width="244" height="492" rx="24" fill="#eef4f7" stroke="#1a4723" stroke-width="4"/>
+
+  <!-- Rear entry door indicator (bottom) -->
+  <rect x="105" y="496" width="70" height="10" rx="4" fill="#98bed3"/>
+  <path d="M105 496 A 70 70 0 0 1 175 496" fill="none" stroke="#98bed3" stroke-width="2" stroke-dasharray="4 4"/>
+
+  <!-- Overhead cabinet storage strip (top wall) -->
+  <rect x="32" y="28" width="216" height="30" rx="8" fill="#d79051" fill-opacity="0.18" stroke="#d79051" stroke-width="2"/>
+  <circle cx="56" cy="43" r="12" fill="#ffffff" stroke="#1a4723" stroke-width="2"/>
+  <text x="56" y="48" text-anchor="middle" font-size="13" fill="#1a4723" font-weight="700">1</text>
+
+  <!-- Single-run kitchenette: stove + prep counter + water canister, along one wall -->
+  <g>
+    <rect x="32" y="380" width="216" height="100" rx="10" fill="#ffffff" stroke="#1a4723" stroke-width="3"/>
+    <circle cx="70" cy="420" r="14" fill="#98bed3" stroke="#1a4723" stroke-width="2"/>
+    <circle cx="105" cy="420" r="10" fill="#eef4f7" stroke="#1a4723" stroke-width="2"/>
+    <rect x="150" y="405" width="40" height="45" rx="6" fill="#eef4f7" stroke="#1a4723" stroke-width="2"/>
+    <circle cx="24" cy="400" r="12" fill="#ffffff" stroke="#1a4723" stroke-width="2"/>
+    <text x="24" y="405" text-anchor="middle" font-size="13" fill="#1a4723" font-weight="700">2</text>
+  </g>
+
+  <!-- Storage cabinet, opposite wall -->
+  <g>
+    <rect x="32" y="270" width="60" height="96" rx="10" fill="#ffffff" stroke="#1a4723" stroke-width="3"/>
+    <line x1="32" y1="318" x2="92" y2="318" stroke="#1a4723" stroke-width="2"/>
+    <circle cx="24" cy="290" r="12" fill="#ffffff" stroke="#1a4723" stroke-width="2"/>
+    <text x="24" y="295" text-anchor="middle" font-size="13" fill="#1a4723" font-weight="700">3</text>
+  </g>
+
+  <!-- DAY MODE: bench / seating area folded, open floor -->
+  <g class="mode-day">
+    <rect x="108" y="90" width="140" height="176" rx="14" fill="#ffffff" stroke="#1a4723" stroke-width="3"/>
+    <rect x="122" y="104" width="112" height="60" rx="8" fill="#d79051" fill-opacity="0.22" stroke="#d79051" stroke-width="2.5"/>
+    <circle cx="178" cy="90" r="12" fill="#ffffff" stroke="#1a4723" stroke-width="2"/>
+    <text x="178" y="95" text-anchor="middle" font-size="13" fill="#1a4723" font-weight="700">4</text>
+  </g>
+
+  <!-- NIGHT MODE: expandable mattress fills the platform -->
+  <g class="mode-night">
+    <rect x="32" y="90" width="216" height="176" rx="16" fill="#ffffff" stroke="#1a4723" stroke-width="3"/>
+    <rect x="46" y="104" width="188" height="148" rx="10" fill="#98bed3" fill-opacity="0.25" stroke="#98bed3" stroke-width="2"/>
+    <circle cx="178" cy="90" r="12" fill="#ffffff" stroke="#1a4723" stroke-width="2"/>
+    <text x="178" y="95" text-anchor="middle" font-size="13" fill="#1a4723" font-weight="700">4</text>
+  </g>
+</svg>
