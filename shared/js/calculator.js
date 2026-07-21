@@ -93,7 +93,7 @@ async function initCalculator(el) {
   const lang = el.dataset.lang || 'en';
   const t = STRINGS[lang];
 
-  const pricing = await fetch('/shared/data/pricing.json').then((r) => r.json());
+  const pricing = await fetch('shared/data/pricing.json').then((r) => r.json());
   const model = pricing.models[modelKey];
   if (!model) return;
 

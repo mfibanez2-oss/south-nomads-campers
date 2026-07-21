@@ -33,7 +33,7 @@ async function initReviews(el) {
   const show = el.dataset.show || 'featured';
   const t = REVIEW_STRINGS[lang];
 
-  const reviews = await fetch(`/shared/data/reviews.${lang}.json`).then((r) => r.json());
+  const reviews = await fetch(`shared/data/reviews.${lang}.json`).then((r) => r.json());
   const list = show === 'all' ? reviews : reviews.filter((r) => r.featured);
 
   const avg = (reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length).toFixed(1);

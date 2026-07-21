@@ -3,7 +3,7 @@
 
 async function initFaq(el) {
   const lang = el.dataset.lang || 'en';
-  const categories = await fetch(`/shared/data/faq.${lang}.json`).then((r) => r.json());
+  const categories = await fetch(`shared/data/faq.${lang}.json`).then((r) => r.json());
 
   el.innerHTML = categories.map((cat) => `
     <div class="faq-category">
