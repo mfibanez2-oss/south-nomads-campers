@@ -1,9 +1,9 @@
 {
-  "currency_base": "USD",
+  "currency": "CLP",
+  "rate_used_for_clp_prices": 950,
+  "rate_note": "CLP/day prices below are fixed (not live-converted) so they match the exact SumUp products created from them. Update every 1-3 months if USD/CLP moves a lot, and re-create the SumUp product prices to match.",
   "deposit_percent": 0.5,
   "long_trip_threshold_days": 15,
-  "fallback_clp_rate": 950,
-  "exchange_rate_api": "https://api.exchangerate-api.com/v4/latest/USD",
   "sumup_general_link": "https://pay.sumup.com/b2c/Q0Z2DE77",
   "seasons": {
     "high": { "months": [11, 12, 1, 2, 3], "label_en": "High Season", "label_es": "Temporada Alta" },
@@ -17,9 +17,9 @@
       "tagline_es": "Patagonia Comfort — hasta 4 personas",
       "sumup_link": "https://pay.sumup.com/b2c/Q6CUILY0",
       "rates": {
-        "high": { "under_threshold_per_day": 280, "over_threshold_per_day": 250 },
-        "mid":  { "under_threshold_per_day": 210, "over_threshold_per_day": 190 },
-        "low":  { "under_threshold_per_day": 176, "over_threshold_per_day": 157 }
+        "high": { "under_threshold_clp_per_day": 266000, "over_threshold_clp_per_day": 237500, "under_threshold_usd_per_day": 280, "over_threshold_usd_per_day": 250, "sumup_product_under_threshold": "", "sumup_product_over_threshold": "" },
+        "mid":  { "under_threshold_clp_per_day": 199500, "over_threshold_clp_per_day": 180500, "under_threshold_usd_per_day": 210, "over_threshold_usd_per_day": 190, "sumup_product_under_threshold": "", "sumup_product_over_threshold": "" },
+        "low":  { "under_threshold_clp_per_day": 167200, "over_threshold_clp_per_day": 149150, "under_threshold_usd_per_day": 176, "over_threshold_usd_per_day": 157, "sumup_product_under_threshold": "", "sumup_product_over_threshold": "" }
       }
     },
     "nomads-m": {
@@ -28,9 +28,9 @@
       "tagline_es": "Para 2 viajeros",
       "sumup_link": "https://pay.sumup.com/b2c/QKAADWJO",
       "rates": {
-        "high": { "under_threshold_per_day": 250, "over_threshold_per_day": 230 },
-        "mid":  { "under_threshold_per_day": 200, "over_threshold_per_day": 180 },
-        "low":  { "under_threshold_per_day": 170, "over_threshold_per_day": 150 }
+        "high": { "under_threshold_clp_per_day": 237500, "over_threshold_clp_per_day": 218500, "under_threshold_usd_per_day": 250, "over_threshold_usd_per_day": 230, "sumup_product_under_threshold": "", "sumup_product_over_threshold": "" },
+        "mid":  { "under_threshold_clp_per_day": 190000, "over_threshold_clp_per_day": 171000, "under_threshold_usd_per_day": 200, "over_threshold_usd_per_day": 180, "sumup_product_under_threshold": "", "sumup_product_over_threshold": "" },
+        "low":  { "under_threshold_clp_per_day": 161500, "over_threshold_clp_per_day": 142500, "under_threshold_usd_per_day": 170, "over_threshold_usd_per_day": 150, "sumup_product_under_threshold": "", "sumup_product_over_threshold": "" }
       }
     }
   },

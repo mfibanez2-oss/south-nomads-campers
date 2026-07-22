@@ -11,6 +11,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // "Our Campers" nav dropdown: click to open/close, close on outside click.
+  document.querySelectorAll('.nav-dropdown').forEach((dropdown) => {
+    const btn = dropdown.querySelector('.nav-dropdown-toggle');
+    if (!btn) return;
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = dropdown.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+    });
+  });
+  document.addEventListener('click', (e) => {
+    document.querySelectorAll('.nav-dropdown.open').forEach((dropdown) => {
+      if (!dropdown.contains(e.target)) dropdown.classList.remove('open');
+    });
+  });
+
   // Sticky mobile CTA bar: show once the hero has scrolled past.
   const stickyBar = document.querySelector('.sticky-bar');
   const hero = document.querySelector('.hero');

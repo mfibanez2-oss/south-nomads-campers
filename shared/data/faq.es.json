@@ -4,19 +4,35 @@
     "items": [
       {
         "q": "¿Cómo funciona el proceso de reserva?",
-        "a": "<ul><li>Elige tu camper y las fechas de viaje</li><li>Te enviamos una cotización</li><li>Confirmas con un <strong>depósito del 50%</strong></li></ul><p>El saldo restante se paga antes del retiro.</p>"
+        "a": "<p>Reservar es simple.</p><ol><li>Elige tu camper y las fechas de viaje</li><li>Te enviamos una cotización personalizada</li><li>Confirmas con un <strong>depósito del 50%</strong></li></ol><p>El saldo restante se paga antes del retiro.</p>"
       },
       {
         "q": "¿Ofrecen descuentos por arriendos largos?",
-        "a": "<p>¡Sí! Ofrecemos tarifas diarias reducidas para roadtrips de 15 días o más — revisa la calculadora en la página de cada camper para ver el precio exacto.</p>"
+        "a": "<p>Sí.</p><p>Ofrecemos tarifas reducidas para viajes de <strong>15 días o más</strong> — la Patagonia se disfruta mejor con calma, y los roadtrips más largos suelen tener mejor precio.</p><p>Y si te vas a ir con todo, creamos el <strong>Patagonia Pass</strong>: un bloque fijo de <strong>28 días</strong> a una tarifa plana que le gana a cualquier otra opción del mercado. Sin tarifas diarias, sin extensiones que negociar — solo un precio imbatible por cuatro semanas completas por la Patagonia. <a href=\"https://patagonia-pass.netlify.app/\" target=\"_blank\" rel=\"noopener\">Conoce el Patagonia Pass →</a></p>"
+      },
+      {
+        "q": "¿Qué es el Patagonia Pass?",
+        "a": "<p>El Patagonia Pass es nuestro bloque de arriendo a precio fijo y fecha fija: <strong>28 días completos</strong> con una camper 4x4 totalmente equipada, por una tarifa plana — sin cobro día a día, sin sorpresas.</p><p>La retiras, avanzas tan lejos y tan despacio como quieras por la Carretera Austral, y la devuelves exactamente cuatro semanas después. Somos el único operador en Chile que ofrece bloques preestablecidos de 28 días a precio fijo.</p><p><strong>Ojo:</strong> solo tenemos <strong>2 campers</strong> disponibles para la Temporada Alta 2026/27, y los bloques se están agotando rápido. <a href=\"https://patagonia-pass.netlify.app/\" target=\"_blank\" rel=\"noopener\">Ver meses disponibles →</a></p>"
+      },
+      {
+        "q": "¿Por qué el Patagonia Pass es más barato que un arriendo normal?",
+        "a": "<p>Porque te comprometes temprano, y nosotros respondemos con nuestra mejor tarifa posible. Reservar 28 días de la forma tradicional corre con el precio diario estándar — el Patagonia Pass fija una tarifa diaria plana y más baja para todo el bloque.</p><p>Eso puede significar ahorros de <strong>hasta USD 1.000</strong> comparado con reservar las mismas fechas día a día — además aseguras tu camper antes de que se agote la temporada alta.</p><p><a href=\"https://patagonia-pass.netlify.app/#calculator\" target=\"_blank\" rel=\"noopener\">Ver tu precio exacto →</a></p>"
+      },
+      {
+        "q": "¿Cómo reservo mi Patagonia Pass?",
+        "a": "<p>Entra a la landing page del Patagonia Pass, elige tu mes, y mira tu precio exacto en pesos chilenos con una calculadora de tipo de cambio en vivo.</p><p>Un <strong>depósito del 50%</strong> asegura tu bloque online hoy mismo; el 50% restante se paga al retirar en Puerto Varas. Simple, transparente, sin costos ocultos.</p><p><a href=\"https://patagonia-pass.netlify.app/#calculator\" target=\"_blank\" rel=\"noopener\">Reserva tu Patagonia Pass →</a></p>"
       },
       {
         "q": "¿Qué métodos de pago aceptan?",
-        "a": "<p>Aceptamos transferencias bancarias internacionales y tarjetas de crédito vía SumUp. Los pagos con tarjeta tienen un recargo del 3%.</p>"
+        "a": "<ul><li>Transferencia bancaria internacional</li><li>Tarjeta de crédito</li></ul><p>Los pagos con tarjeta de crédito incluyen un recargo del 3%.</p>"
       },
       {
         "q": "¿Necesito dejar un depósito de garantía?",
-        "a": "<p>Sí. El día de la entrega se debe pagar un depósito de garantía de <strong>CLP $1.500.000</strong> (tarjeta, transferencia, PayPal o efectivo). Se devuelve dentro de 48 horas después de que la camper es devuelta en las mismas condiciones, con el estanque lleno. Para arriendos que incluyen cruce a Argentina, el depósito de garantía es de <strong>CLP $2.000.000</strong>.</p>"
+        "a": "<p>Sí.</p><p>El día de la entrega se debe pagar un monto de <strong>$1.500.000 CLP</strong>, que puede cargarse a tarjeta de crédito, transferirse, pagarse vía PayPal o en efectivo. El reembolso, siempre que la camper y el vehículo sean devueltos en las mismas condiciones en que se recibieron, se procesa dentro de 48 horas una vez devuelta (con el estanque de diésel y gas lleno). Para arriendos que incluyen viaje por territorio argentino, el depósito de garantía sube a <strong>$2.000.000 CLP</strong>.</p>"
+      },
+      {
+        "q": "¿Puedo cancelar mi viaje?",
+        "a": "<p>Sí, pero considera lo siguiente: si cancelas tu reserva antes de 30 días desde la fecha de inicio del viaje, se reembolsa el 75% del monto pagado. Si cancelas después de esos 30 días, no se emite reembolso.</p>"
       }
     ]
   },
@@ -25,11 +41,11 @@
     "items": [
       {
         "q": "¿Dónde puedo retirar la camper?",
-        "a": "<p>Nuestra base principal es <strong>Puerto Varas</strong>, sur de Chile. También coordinamos retiro o devolución en el Aeropuerto de Puerto Montt, Coyhaique o Puerto Natales con un costo adicional.</p>"
+        "a": "<p>Nuestra base principal es <strong>Puerto Varas, Chile</strong>.</p><p>También ofrecemos retiro o devolución con un costo adicional en:</p><ul><li>Aeropuerto de Puerto Montt</li><li>Coyhaique (Aeropuerto Balmaceda)</li><li>Puerto Natales</li></ul><p>Otras ubicaciones pueden estar disponibles bajo consulta. Revisa las tarifas exactas en nuestra <a href=\"es/hubs/index.html\">página de Puntos de Retiro</a>.</p>"
       },
       {
         "q": "¿Cuáles son los horarios de retiro y devolución?",
-        "a": "<p>Los retiros están disponibles entre las <strong>10:00 y las 17:00</strong>. Las devoluciones deben completarse antes de las <strong>16:00</strong>. Cada retiro incluye una inducción completa de la camper.</p>"
+        "a": "<ul><li>Retiro: <strong>10:00 – 17:00</strong></li><li>Devolución: antes de las <strong>16:00</strong></li></ul><p>Cada retiro incluye una inducción completa de la camper y sus sistemas. Para la devolución, ten en cuenta que después de las 16:30 se cobra un día adicional de arriendo.</p>"
       }
     ]
   },
@@ -38,15 +54,11 @@
     "items": [
       {
         "q": "¿Necesito una licencia especial?",
-        "a": "<p>Basta con una licencia de conducir regular. Debes tener al menos <strong>25 años</strong> y sentirte cómodo manejando transmisión manual.</p>"
+        "a": "<p>Basta con una licencia de conducir válida de tu país.</p><ul><li>Edad mínima: <strong>25 años</strong></li><li>Se requiere experiencia con transmisión manual</li></ul><p>Los conductores adicionales deben cumplir los mismos requisitos (25+, experiencia manual) y deben ser declarados a South Nomads Campers antes de que comience el arriendo. Esto es muy importante, porque los conductores no declarados no están cubiertos por el seguro.</p>"
       },
       {
-        "q": "¿Puedo manejar la Carretera Austral con sus campers?",
-        "a": "<p>Por supuesto. Nuestras camper trucks 4x4 están construidas para los caminos de la Patagonia, tramos de ripio y viajes remotos por el sur de Chile — ideales para un roadtrip por la Carretera Austral.</p>"
-      },
-      {
-        "q": "¿Puedo cruzar a Argentina?",
-        "a": "<p>Sí. El cruce a Argentina está permitido con los documentos correspondientes (los coordinamos con tu reserva) y el depósito de garantía mayor de CLP $2.000.000.</p>"
+        "q": "¿Puedo manejar con seguridad por la Carretera Austral?",
+        "a": "<p>Sí.</p><p>Nuestras <strong>camper trucks 4x4</strong> están construidas para los caminos de la Patagonia, tramos de ripio y viajes remotos por el sur de Chile.</p><p>Maneja despacio, disfruta el paisaje, y todo saldrá bien.</p>"
       }
     ]
   },
@@ -55,28 +67,33 @@
     "items": [
       {
         "q": "¿Qué incluye la camper por dentro?",
-        "a": "<p>Cada arriendo incluye:</p><ul><li>Cama y ropa de cama</li><li>Equipamiento de cocina</li><li>Refrigerador y cocina a gas</li><li>Mesa y sillas para exterior</li><li>Sistema de energía solar</li><li>Calefactor a diésel</li></ul>"
+        "a": "<p>Cada arriendo incluye lo esencial para un roadtrip por la Patagonia:</p><ul><li>Calefactor a diésel</li><li>Kit de cocina</li><li>Refrigerador</li><li>Sistema solar</li><li>Ropa de cama</li><li>Mesa y sillas de exterior</li></ul><p>Revisa la ficha técnica completa en la página de cada camper: <a href=\"es/campers/nomads-l.html\">Nomads L</a> · <a href=\"es/campers/nomads-m.html\">Nomads M</a>.</p>"
       },
       {
-        "q": "¿Ofrecen internet o Starlink?",
-        "a": "<p>Sí. El arriendo opcional de <strong>Starlink</strong> está disponible para quienes necesitan internet confiable en zonas remotas de la Patagonia.</p>"
+        "q": "¿Las campers tienen internet?",
+        "a": "<p>Ofrecemos arriendo opcional de <strong>internet satelital Starlink</strong>.</p><p>Perfecto para trabajo remoto o para mantenerte conectado durante tu roadtrip por la Patagonia.</p>"
       }
     ]
   },
   {
-    "category": "Seguro y Soporte",
+    "category": "Seguro y Seguridad",
     "items": [
       {
         "q": "¿Cómo funciona el seguro?",
-        "a": "<p>El seguro está incluido en el arriendo de tu camper en Chile. El deducible es de aproximadamente <strong>1.000 EUR</strong>.</p>"
-      },
-      {
-        "q": "¿Qué pasa si necesito ayuda durante el viaje?",
-        "a": "<p>Damos soporte directo durante tu viaje por la Patagonia. Si necesitas consejos de ruta, ayuda mecánica o asistencia en el camino, escríbenos en cualquier momento por WhatsApp.</p>"
+        "a": "<p>El seguro está incluido en el arriendo.</p><p>El deducible es de aproximadamente <strong>1.000 EUR</strong>.</p><p>Esto aplica principalmente a los daños típicos de los caminos de la Patagonia, como astillados de parabrisas por el ripio.</p>"
       },
       {
         "q": "¿Debo devolver la camper limpia?",
-        "a": "<p>Checklist de devolución:</p><ul><li>Interior y exterior limpios (cargo de hasta CLP $150.000 si no)</li><li>Estanque de combustible lleno — el faltante se cobra a CLP $2.500/litro</li><li>Baño portátil vacío y limpio (cargo de hasta CLP $300.000 si no)</li><li>Todo el equipamiento completo y sin daños según el inventario</li><li>Documentos del vehículo devueltos a South Nomads Campers</li></ul>"
+        "a": "<p>Sí, por favor. Te pedimos seguir este checklist de devolución:</p><ol><li>Estanque de combustible: la camper se entrega con el estanque lleno. Debe devolverse con el estanque lleno — el combustible faltante se cobra a CLP $2.500/litro.</li><li>Interior y exterior: limpios (cargo de hasta $150.000 CLP si no)</li><li>Baño portátil: vacío y limpio (cargo de hasta $300.000 CLP si no)</li><li>Todo el equipamiento: completo y sin daños según el inventario</li><li>Documentos del vehículo: devueltos a South Nomads Campers</li></ol>"
+      }
+    ]
+  },
+  {
+    "category": "Durante tu Viaje",
+    "items": [
+      {
+        "q": "¿Qué pasa si necesito ayuda durante el viaje?",
+        "a": "<p>Nuestro objetivo principal es que viajes con seguridad y disfrutes al máximo nuestro hermoso país, ¡por eso estamos disponibles durante todo tu viaje!</p><p>Puedes contactarnos para:</p><ul><li>Recomendaciones de ruta</li><li>Consejos sobre el clima</li><li>Soporte mecánico</li><li>Preguntas generales de viaje</li></ul><p>Siempre recomendamos escribirnos por WhatsApp antes que por email. Rodrigo o Josefina te ayudarán sin demora.</p>"
       }
     ]
   }

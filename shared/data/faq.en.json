@@ -4,19 +4,35 @@
     "items": [
       {
         "q": "How does the booking process work?",
-        "a": "<ul><li>Choose your camper and travel dates</li><li>We send you a quote</li><li>Confirm with a <strong>50% deposit</strong></li></ul><p>The remaining balance is paid before pickup.</p>"
+        "a": "<p>Booking is simple.</p><ol><li>Choose your camper and travel dates</li><li>We send you a personalized quote</li><li>Confirm with a <strong>50% deposit</strong></li></ol><p>The remaining balance is paid before pickup.</p>"
       },
       {
-        "q": "Do you offer discounts for long rentals?",
-        "a": "<p>Yes! We offer reduced daily rates for longer Patagonia roadtrips of 15 days or more — see the calculator on each camper's page for exact pricing.</p>"
+        "q": "Do you offer discounts for long-term rentals?",
+        "a": "<p>Yes.</p><p>We offer reduced rates for trips of <strong>15 days or longer</strong> — Patagonia is best experienced slowly, and longer road trips usually get better pricing.</p><p>And if you're going all in, we created the <strong>Patagonia Pass</strong>: a fixed <strong>28-day block</strong> at one flat rate that beats anything else on the market. No daily rates, no extensions to negotiate — just one unbeatable price for four full weeks across Patagonia. <a href=\"https://patagonia-pass.netlify.app/\" target=\"_blank\" rel=\"noopener\">Check out the Patagonia Pass →</a></p>"
+      },
+      {
+        "q": "What is the Patagonia Pass?",
+        "a": "<p>The Patagonia Pass is our fixed-price, fixed-date rental block: <strong>28 full days</strong> with a fully equipped 4x4 camper, for one flat rate — no day-by-day billing, no surprises.</p><p>Pick it up, go as far and as slow as you want along the Carretera Austral, and return it exactly four weeks later. We're the only operator in Chile offering pre-set 28-day blocks at a fixed price.</p><p><strong>Heads up:</strong> we only have <strong>2 campers</strong> available for High Season 2026/27, and blocks are going fast. <a href=\"https://patagonia-pass.netlify.app/\" target=\"_blank\" rel=\"noopener\">See available months →</a></p>"
+      },
+      {
+        "q": "Why is the Patagonia Pass cheaper than a regular rental?",
+        "a": "<p>Because you commit early, and we commit right back with our best possible rate. Booking 28 days the regular way runs at standard daily pricing — the Patagonia Pass locks in a lower, flat daily rate for the whole block instead.</p><p>That can mean savings of <strong>up to $1,000 USD</strong> compared to booking the same dates day by day — plus you guarantee your camper before high season sells out.</p><p><a href=\"https://patagonia-pass.netlify.app/#calculator\" target=\"_blank\" rel=\"noopener\">See your exact price →</a></p>"
+      },
+      {
+        "q": "How do I reserve my Patagonia Pass?",
+        "a": "<p>Head to the Patagonia Pass landing page, pick your month, and see your exact price in Chilean pesos with a live exchange-rate calculator.</p><p>A <strong>50% deposit</strong> secures your block online today; the remaining 50% is paid at pick-up in Puerto Varas. Simple, transparent, no hidden fees.</p><p><a href=\"https://patagonia-pass.netlify.app/#calculator\" target=\"_blank\" rel=\"noopener\">Reserve your Patagonia Pass →</a></p>"
       },
       {
         "q": "What payment methods do you accept?",
-        "a": "<p>We accept international bank transfers and major credit cards via SumUp. Credit card payments include a 3% processing fee.</p>"
+        "a": "<ul><li>International bank transfer</li><li>Credit card</li></ul><p>Credit card payments include a 3% processing fee.</p>"
       },
       {
         "q": "Do I need a security deposit?",
-        "a": "<p>Yes. On the day of delivery, a security deposit of <strong>CLP $1,500,000</strong> is required (credit card, transfer, PayPal or cash). It's refunded within 48 hours after the camper is returned in the same condition, with a full tank. For rentals that include travel through Argentina, the security deposit is <strong>CLP $2,000,000</strong>.</p>"
+        "a": "<p>Yes.</p><p>On the day of delivery, an amount of <strong>$1,500,000 CLP</strong> must be paid, which can be charged to a credit card, transferred, paid via PayPal, or in cash. The refund, provided the camper and truck are returned in the same condition as received, will be processed within 48 hours once the RV is returned (with a full diesel and gas tank). For rentals that include travel through Argentine territory, the security deposit increases to <strong>$2,000,000 CLP</strong>.</p>"
+      },
+      {
+        "q": "Can I cancel my trip?",
+        "a": "<p>Yes, but please consider: if you cancel your reservation before 30 days from the travel start date, 75% of the paid amount will be refunded. If you cancel after those 30 days, no refund will be issued.</p>"
       }
     ]
   },
@@ -25,11 +41,11 @@
     "items": [
       {
         "q": "Where can I pick up the camper?",
-        "a": "<p>Our main hub is <strong>Puerto Varas</strong>, southern Chile. We can also coordinate pickup or drop-off at Puerto Montt Airport, Coyhaique, or Puerto Natales for an additional fee.</p>"
+        "a": "<p>Our main base is in <strong>Puerto Varas, Chile</strong>.</p><p>We also offer pickup or drop-off options for an extra fee in:</p><ul><li>Puerto Montt Airport</li><li>Coyhaique (Balmaceda Airport)</li><li>Puerto Natales</li></ul><p>Other locations may be available on request. See exact fees on our <a href=\"en/hubs/index.html\">Rental Hubs page</a>.</p>"
       },
       {
-        "q": "What are the pickup and return times?",
-        "a": "<p>Pickups are available between <strong>10 AM and 5 PM</strong>. Returns must be completed before <strong>4 PM</strong>. Every pickup includes a full camper walkthrough.</p>"
+        "q": "What are the pickup and drop-off times?",
+        "a": "<ul><li>Pickup: <strong>10:00 AM – 5:00 PM</strong></li><li>Drop-off: before <strong>4:00 PM</strong></li></ul><p>Every pickup includes a full walkthrough of the camper and its systems. For drop-off, please note that after 4:30 PM an additional day's rental will be charged.</p>"
       }
     ]
   },
@@ -37,16 +53,12 @@
     "category": "Driving in Patagonia",
     "items": [
       {
-        "q": "Do I need a special driver's license?",
-        "a": "<p>A regular driver's license is enough. You must be at least <strong>25 years old</strong> and comfortable driving a manual transmission.</p>"
+        "q": "Do I need a special license?",
+        "a": "<p>You only need a valid driver's license from your country.</p><ul><li>Minimum age: <strong>25 years old</strong></li><li>Manual transmission experience required</li></ul><p>Additional drivers must meet the same requirements (25+, manual experience) and must be declared to South Nomads Campers before the rental begins. This is very important, because undeclared drivers are not covered by insurance.</p>"
       },
       {
-        "q": "Can I drive the Carretera Austral with your campers?",
-        "a": "<p>Absolutely. Our 4x4 camper trucks are built for Patagonia roads, gravel sections and remote travel across southern Chile — ideal for a Carretera Austral roadtrip.</p>"
-      },
-      {
-        "q": "Can I cross into Argentina?",
-        "a": "<p>Yes. Border crossings into Argentina are allowed with the correct paperwork (arranged with your booking) and the higher CLP $2,000,000 security deposit.</p>"
+        "q": "Can I safely drive the Carretera Austral?",
+        "a": "<p>Yes.</p><p>Our <strong>4x4 camper trucks</strong> are built for Patagonia roads, gravel sections, and remote travel across southern Chile.</p><p>Drive slowly, enjoy the scenery, and you'll be fine.</p>"
       }
     ]
   },
@@ -55,28 +67,33 @@
     "items": [
       {
         "q": "What is included inside the camper?",
-        "a": "<p>Each camper rental includes:</p><ul><li>Bed and bedding</li><li>Kitchen equipment</li><li>Fridge and gas stove</li><li>Outdoor table and chairs</li><li>Solar power system</li><li>Diesel heater</li></ul>"
+        "a": "<p>Every camper includes the essentials for a Patagonia roadtrip:</p><ul><li>Diesel heater</li><li>Kitchen kit</li><li>Fridge</li><li>Solar setup</li><li>Bedding</li><li>Outdoor table and chairs</li></ul><p>See the full spec sheet on each camper's page: <a href=\"en/campers/nomads-l.html\">Nomads L</a> · <a href=\"en/campers/nomads-m.html\">Nomads M</a>.</p>"
       },
       {
-        "q": "Do you offer internet or Starlink?",
-        "a": "<p>Yes. Optional <strong>Starlink rental</strong> is available for travelers who need reliable internet in remote Patagonia areas.</p>"
+        "q": "Do the campers have internet?",
+        "a": "<p>We offer optional <strong>Starlink satellite internet</strong> rentals.</p><p>Perfect for remote work or staying connected during your Patagonia roadtrip.</p>"
       }
     ]
   },
   {
-    "category": "Insurance & Support",
+    "category": "Insurance & Safety",
     "items": [
       {
         "q": "How does insurance work?",
-        "a": "<p>Insurance is included with your camper rental in Chile. The deductible is approximately <strong>1,000 EUR</strong>.</p>"
-      },
-      {
-        "q": "What happens if I need help during the trip?",
-        "a": "<p>We provide direct support during your Patagonia trip. If you need route advice, mechanical help or roadside assistance, contact us anytime by WhatsApp.</p>"
+        "a": "<p>Insurance is included in the rental.</p><p>The deductible is approximately <strong>1,000 EUR</strong>.</p><p>This mainly applies to common Patagonia road damage like windshield chips from gravel roads.</p>"
       },
       {
         "q": "Do I need to return the camper clean?",
-        "a": "<p>Return checklist:</p><ul><li>Interior &amp; exterior clean (fee up to CLP $150,000 if not)</li><li>Full fuel tank — missing fuel charged at CLP $2,500/liter</li><li>Portable toilet emptied and clean (fee up to CLP $300,000 if not)</li><li>All equipment complete and undamaged per the inventory list</li><li>Vehicle documents returned to South Nomads Campers</li></ul>"
+        "a": "<p>Yes, please. We kindly ask that you follow this return checklist:</p><ol><li>Fuel tank: the camper is delivered with a full tank. It must be returned with a full tank — missing fuel is charged at CLP $2,500/liter.</li><li>Interior &amp; exterior: clean (fee: up to $150,000 CLP if not)</li><li>Portable toilet: empty and clean (fee: up to $300,000 CLP if not)</li><li>All equipment: complete and undamaged per the inventory list</li><li>Vehicle documents: returned to South Nomads Campers</li></ol>"
+      }
+    ]
+  },
+  {
+    "category": "During Your Trip",
+    "items": [
+      {
+        "q": "What happens if I need help during the trip?",
+        "a": "<p>Our main goal is that you travel securely and enjoy our beautiful country to the fullest, so we're available throughout your trip!</p><p>You can contact us for:</p><ul><li>Route recommendations</li><li>Weather advice</li><li>Mechanical support</li><li>General travel questions</li></ul><p>We always recommend texting us on WhatsApp before emailing. Rodrigo or Josefina will assist you without delay.</p>"
       }
     ]
   }

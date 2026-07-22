@@ -1,5 +1,6 @@
-// Pricing calculator, refactored from the working prototype in patagonia-pass/index.html
-// (live USD->CLP rate, es-CL formatting) but generalized to model + season + day-count.
+// Pricing calculator. Prices are fixed CLP-per-day rates (shared/data/pricing.json),
+// matching the SumUp products created from that same table -- no live exchange-rate
+// conversion, so what the site shows always matches what SumUp charges.
 //
 // Expected markup (see /en/campers/nomads-l.html for a full example):
 // <div class="calculator" data-model="nomads-l" data-lang="en">
@@ -17,28 +18,19 @@ const MONTH_NAMES = {
 const STRINGS = {
   en: {
     total: 'Total trip cost', deposit: 'Deposit due now (50%)', balance: 'Balance at pickup (50%)',
-    rateNote: (rate) => `Reference rate: 1 USD ≈ ${rate.toLocaleString('es-CL')} CLP — `,
-    verify: 'verify on Google', pay: 'Pay Deposit Now', copy: 'Copy amount', copied: 'Copied!',
-    perDay: (n) => `USD ${n}/day`
+    pay: 'Pay Deposit Now', copy: 'Copy amount', copied: 'Copied!',
+    perDay: (n) => `${n.toLocaleString('es-CL')} CLP/day`,
+    productNote: (days) => `This product is priced per day — select quantity <strong>${days}</strong> at checkout, SumUp will total it automatically.`,
+    fallbackNote: 'Copy the deposit amount above, then paste it into SumUp — this camper doesn\'t have a per-day product configured yet.'
   },
   es: {
     total: 'Costo total del viaje', deposit: 'Depósito a pagar ahora (50%)', balance: 'Saldo al retiro (50%)',
-    rateNote: (rate) => `Tipo de cambio referencial: 1 USD ≈ ${rate.toLocaleString('es-CL')} CLP — `,
-    verify: 'verificar en Google', pay: 'Pagar Depósito Ahora', copy: 'Copiar monto', copied: '¡Copiado!',
-    perDay: (n) => `USD ${n}/día`
+    pay: 'Pagar Depósito Ahora', copy: 'Copiar monto', copied: '¡Copiado!',
+    perDay: (n) => `${n.toLocaleString('es-CL')} CLP/día`,
+    productNote: (days) => `Este producto se cobra por día — selecciona cantidad <strong>${days}</strong> al pagar, SumUp calcula el total automáticamente.`,
+    fallbackNote: 'Copia el monto del depósito de arriba y pégalo en SumUp — esta camper todavía no tiene un producto por día configurado.'
   }
 };
-
-async function fetchRate(fallback) {
-  try {
-    const res = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
-    const data = await res.json();
-    const rate = Math.round(data.rates.CLP);
-    return rate > 0 ? rate : fallback;
-  } catch (e) {
-    return fallback;
-  }
-}
 
 function fmtCLP(n) {
   return '$' + Math.round(n).toLocaleString('es-CL') + ' CLP';
@@ -51,28 +43,31 @@ function seasonForMonth(month1to12, pricing) {
   return 'mid';
 }
 
-function computeQuote({ modelKey, month1to12, days, pricing, rateCLP }) {
+function computeQuote({ modelKey, month1to12, days, pricing }) {
   const model = pricing.models[modelKey];
   const season = seasonForMonth(month1to12, pricing);
   const band = model.rates[season];
-  const perDayUSD = days >= pricing.long_trip_threshold_days ? band.over_threshold_per_day : band.under_threshold_per_day;
-  const totalUSD = perDayUSD * days;
-  const totalCLP = totalUSD * rateCLP;
+  const overThreshold = days >= pricing.long_trip_threshold_days;
+  const perDayCLP = overThreshold ? band.over_threshold_clp_per_day : band.under_threshold_clp_per_day;
+  const sumupProduct = overThreshold ? band.sumup_product_over_threshold : band.sumup_product_under_threshold;
+  const totalCLP = perDayCLP * days;
   const depositCLP = totalCLP * pricing.deposit_percent;
   const balanceCLP = totalCLP - depositCLP;
-  return { season, perDayUSD, totalUSD, totalCLP, depositCLP, balanceCLP };
+  return { season, perDayCLP, totalCLP, depositCLP, balanceCLP, sumupProduct };
 }
 
-function renderResult(container, quote, model, lang, rateCLP) {
+function renderResult(container, quote, model, lang, days) {
   const t = STRINGS[lang];
+  const payLink = quote.sumupProduct || model.sumup_link;
+  const note = quote.sumupProduct ? t.productNote(days) : t.fallbackNote;
   container.innerHTML = `
-    <div class="calc-line"><span>${t.perDay(quote.perDayUSD)}</span><span></span></div>
+    <div class="calc-line"><span>${t.perDay(quote.perDayCLP)}</span><span></span></div>
     <div class="calc-line total"><span>${t.total}</span><span>${fmtCLP(quote.totalCLP)}</span></div>
     <div class="calc-line deposit"><span>${t.deposit}</span><span id="calc-deposit-amount">${fmtCLP(quote.depositCLP)}</span></div>
     <div class="calc-line"><span>${t.balance}</span><span>${fmtCLP(quote.balanceCLP)}</span></div>
-    <div class="calc-rate-note">${t.rateNote(rateCLP)}<a href="https://www.google.com/search?q=usd+to+clp" target="_blank" rel="noopener">${t.verify}</a></div>
+    <div class="calc-rate-note">${note}</div>
     <div class="calc-row" style="margin-top:16px; margin-bottom:0;">
-      <a class="btn btn-primary btn-block" id="calc-pay-btn" href="${model.sumup_link}" target="_blank" rel="noopener">${t.pay}</a>
+      <a class="btn btn-primary btn-block" id="calc-pay-btn" href="${payLink}" target="_blank" rel="noopener">${t.pay}</a>
       <button class="copy-btn" id="calc-copy-btn" type="button">${t.copy}</button>
     </div>
   `;
@@ -91,13 +86,10 @@ function renderResult(container, quote, model, lang, rateCLP) {
 async function initCalculator(el) {
   const modelKey = el.dataset.model;
   const lang = el.dataset.lang || 'en';
-  const t = STRINGS[lang];
 
   const pricing = await fetch('shared/data/pricing.json').then((r) => r.json());
   const model = pricing.models[modelKey];
   if (!model) return;
-
-  const rateCLP = await fetchRate(pricing.fallback_clp_rate);
 
   const monthSelect = el.querySelector('[data-role="month"]');
   const dayPillsWrap = el.querySelector('[data-role="day-pills"]');
@@ -142,8 +134,8 @@ async function initCalculator(el) {
 
   function update() {
     const month1to12 = parseInt(monthSelect.value, 10);
-    const quote = computeQuote({ modelKey, month1to12, days: selectedDays, pricing, rateCLP });
-    renderResult(resultEl, quote, model, lang, rateCLP);
+    const quote = computeQuote({ modelKey, month1to12, days: selectedDays, pricing });
+    renderResult(resultEl, quote, model, lang, selectedDays);
     const stickyPrice = document.querySelector('.sticky-bar [data-role="sticky-deposit"]');
     if (stickyPrice) stickyPrice.textContent = fmtCLP(quote.depositCLP);
   }
