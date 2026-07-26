@@ -12,12 +12,22 @@ Edit `shared/data/pricing.json`. It's shared by both languages and both camper p
 **If the booking engine (see below) is live, also update `south-nomads-booking-api/src/data/pricing.snapshot.json`** with the same values and redeploy the Worker (`npm run deploy` in that repo) — the Worker keeps its own copy so it never has to trust a client-submitted price, and it does not read this file automatically.
 
 ## Change a pickup/drop-off hub fee
-Edit `shared/data/hubs.json` (fee in CLP, plus the EN/ES labels shown in the hub selector and on the Rental Hubs page). **Also update `south-nomads-booking-api/src/data/hubs.snapshot.json`** with the matching `fee_clp` values and redeploy the Worker, for the same reason as above.
+Edit `shared/data/hubs.json` (fee in CLP, plus EN/ES labels) and the matching static prose on the Rental Hubs page (`en/hubs/index.html`, `es/hubs/index.html`) — the JSON isn't read by any page today, it's only kept in sync for the dormant booking-engine backend (see below). **If that backend gets wired back up, also update `south-nomads-booking-api/src/data/hubs.snapshot.json`** with the matching `fee_clp` values and redeploy the Worker.
 
-## The "Get a Quote" form (book now section)
-`shared/js/quote-form.js` powers the `.quote-form` block on each camper page: it computes a live price estimate (same season/threshold logic as before) and lets the visitor send it straight to `reservas` via **WhatsApp** or **Email** — no calendar, no automatic availability check, no card payment. It's a lead-capture form; you (or Josefina) confirm availability and take payment manually, same as before.
-- The WhatsApp number and owner email are constants at the top of `quote-form.js` (`WHATSAPP_NUMBER`, `OWNER_EMAIL`) — update there if either changes.
-- A full automatic booking engine (real-time availability, embedded SumUp card payment) was built separately and still exists at `south-nomads-booking-api` (a Cloudflare Worker + D1 database), fully configured and deployable, but it is **not currently wired into the site** — this was a deliberate choice to keep the book-now form simple for now. See that repo's `README.md` if you want to switch back to it later.
+## The single lead form (Contact page)
+`shared/js/contact-form.js` powers the one form on `en/contact.html`/`es/contact.html` — the **only** form on the site. The Nomads L and Nomads M pages just have a "Get a Quote" CTA button linking to that Contact page; there's no separate form per camper anymore.
+
+On submit, it does three things:
+1. Validates every field is filled in properly (name, valid email, a real complete phone number — rejects things like a bare "+1" country code — and a message).
+2. POSTs the lead to the `south-nomads-booking-api` Worker's `/contact` endpoint, which emails it to `josefina@southnomadscampers.com` and `rodrigo@southnomadscampers.com` via Resend.
+3. On success, redirects (full page navigation, not an inline message) to `en/thank-you.html`/`es/thank-you.html`. That page pushes a `generate_lead` event to `window.dataLayer` for GTM to pick up — **that pageview is the actual Google Ads conversion signal**, so don't remove or rename that page without updating the conversion action in Google Ads to match.
+
+If the Worker call fails (e.g. it isn't deployed yet), the form shows an inline error with a WhatsApp fallback link instead of redirecting — a lead is never silently lost.
+
+- A full automatic booking engine (real-time availability, embedded SumUp card payment) was built separately and still exists at `south-nomads-booking-api` (a Cloudflare Worker + D1 database), fully configured and deployable, but it is **not currently wired into the site** — this was a deliberate choice to keep things simple for now. See that repo's `README.md` if you want to switch back to it later.
+
+## Google Tag Manager
+Every page loads GTM container `GTM-P62RC9MN` (head script + body noscript iframe, right after `<head>`/`<body>`). GA4 and the Meta Pixel are both configured inside that GTM container, not hardcoded in this repo — manage them from tagmanager.google.com, not by editing HTML here.
 
 ## Add or edit a review
 Edit **both** `shared/data/reviews.en.json` and `shared/data/reviews.es.json`. Use the same `id` for the same reviewer in both files so they line up. Fields:

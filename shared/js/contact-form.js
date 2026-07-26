@@ -14,7 +14,6 @@ const WHATSAPP_URL = 'https://wa.link/m2ahp2';
 const STRINGS = {
   en: {
     sending: 'Sending…',
-    sent: "Message sent — we'll get back to you soon.",
     failed: "Something went wrong sending your message. Try WhatsApp instead:",
     missingName: 'your full name', missingEmail: 'a valid email address',
     missingPhone: 'a complete phone number (with country and area code, not just a country code)',
@@ -24,7 +23,6 @@ const STRINGS = {
   },
   es: {
     sending: 'Enviando…',
-    sent: 'Mensaje enviado — te respondemos pronto.',
     failed: 'Hubo un problema al enviar tu mensaje. Probá por WhatsApp:',
     missingName: 'tu nombre completo', missingEmail: 'un email válido',
     missingPhone: 'un teléfono completo (con código de país y área, no solo el código de país)',
@@ -88,9 +86,9 @@ function initContactForm(el) {
         }),
       });
       if (!res.ok) throw new Error('send failed');
-      statusEl.textContent = t.sent;
-      [nameInput, emailInput, phoneInput, messageInput].forEach((i) => { i.value = ''; });
-      camperSelect.value = '';
+      // Full page navigation (not fetch/SPA) so GTM sees a real pageview on
+      // the thank-you page — that pageview is the Google Ads conversion signal.
+      window.location.href = lang === 'es' ? 'es/thank-you.html' : 'en/thank-you.html';
     } catch (e) {
       statusEl.innerHTML = `${t.failed} <a href="${WHATSAPP_URL}" target="_blank" rel="noopener">${t.whatsappCta}</a>`;
     } finally {
