@@ -5,10 +5,19 @@ This is a plain static site — no build step. Every page is a regular `.html` f
 ## Change a price
 Edit `shared/data/pricing.json`. It's shared by both languages and both camper pages — one edit updates the whole site.
 
-- `rates.high/mid/low.under_threshold_per_day` — price per day for trips up to 14 days.
-- `rates.high/mid/low.over_threshold_per_day` — price per day for trips of 15+ days.
+- `models.<model>.rates.high/mid/low.under_threshold_clp_per_day` — price per day for trips up to 14 days.
+- `models.<model>.rates.high/mid/low.over_threshold_clp_per_day` — price per day for trips of 15+ days.
 - `deposit_percent` — currently `0.5` (50%).
-- `fallback_clp_rate` — used only if the live exchange rate API is down. Update this every few months to a realistic USD→CLP rate.
+
+**If the booking engine (see below) is live, also update `south-nomads-booking-api/src/data/pricing.snapshot.json`** with the same values and redeploy the Worker (`npm run deploy` in that repo) — the Worker keeps its own copy so it never has to trust a client-submitted price, and it does not read this file automatically.
+
+## Change a pickup/drop-off hub fee
+Edit `shared/data/hubs.json` (fee in CLP, plus the EN/ES labels shown in the hub selector and on the Rental Hubs page). **Also update `south-nomads-booking-api/src/data/hubs.snapshot.json`** with the matching `fee_clp` values and redeploy the Worker, for the same reason as above.
+
+## The "Get a Quote" form (book now section)
+`shared/js/quote-form.js` powers the `.quote-form` block on each camper page: it computes a live price estimate (same season/threshold logic as before) and lets the visitor send it straight to `reservas` via **WhatsApp** or **Email** — no calendar, no automatic availability check, no card payment. It's a lead-capture form; you (or Josefina) confirm availability and take payment manually, same as before.
+- The WhatsApp number and owner email are constants at the top of `quote-form.js` (`WHATSAPP_NUMBER`, `OWNER_EMAIL`) — update there if either changes.
+- A full automatic booking engine (real-time availability, embedded SumUp card payment) was built separately and still exists at `south-nomads-booking-api` (a Cloudflare Worker + D1 database), fully configured and deployable, but it is **not currently wired into the site** — this was a deliberate choice to keep the book-now form simple for now. See that repo's `README.md` if you want to switch back to it later.
 
 ## Add or edit a review
 Edit **both** `shared/data/reviews.en.json` and `shared/data/reviews.es.json`. Use the same `id` for the same reviewer in both files so they line up. Fields:
@@ -23,6 +32,5 @@ Edit `shared/data/faq.en.json` and `shared/data/faq.es.json`. Each entry is `{ "
 Drop the image into the matching folder under `shared/img/` (`nomads-l/`, `nomads-m/`, `lifestyle/`, `patagonia/`) and reference it with an `<img src="/shared/img/...">` tag on the page you want it on.
 
 ## Known open items (flagged during the build)
-- **Floorplan diagrams** (`shared/img/floorplans/nomads-l.svg`, `nomads-m.svg`) are first-draft schematics based on interior photos. Before relying on them for customer expectations, confirm: the exact bed-conversion mechanism per model, water tank/fridge placement, portable toilet storage, and which base vehicle (Hilux/D-Max/L200/Maxus) they should depict.
 - **Custom domain**: the site is not yet pointed at `southnomadscampers.com`. That needs a `CNAME` file in this repo plus a DNS change with your domain provider — done as a deliberate follow-up once the `github.io` URL is verified working.
 - **More Google review links**: only 4 reviews have a personal Google Maps deep link so far (Leonie, Josse, Rhys, Andreas). If you can grab more from your Google Business Profile's "reviews" tab (look for a share icon on each review), add them to the JSON files above.

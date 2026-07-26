@@ -17,10 +17,12 @@ h1, h2, h3, h4 {
   font-family: var(--font-display);
   font-weight: 800;
   letter-spacing: -0.02em;
-  line-height: 1.1;
+  line-height: 1.05;
   margin: 0 0 var(--space-2);
   color: var(--color-forest-dark);
 }
+
+h1, h2 { text-transform: uppercase; letter-spacing: -0.01em; }
 
 h1 { font-size: var(--text-hero); }
 h2 { font-size: var(--text-h1); }
@@ -90,3 +92,28 @@ section.tight { padding: var(--space-4) 0; }
   section { padding: var(--space-5) 0; }
   .container { padding: 0 var(--space-2); }
 }
+
+/* Solid-color full-bleed section blocks, for alternating page rhythm
+   (Camperworld-style: big type over solid backgrounds, section by section).
+   Apply directly to a <section>; overrides text colors for readability. */
+.block-dark, .block-forest, .block-ember {
+  color: var(--color-white);
+}
+.block-dark { background: var(--color-forest-dark); }
+.block-forest { background: var(--color-forest); }
+.block-ember { background: var(--color-ember); }
+.block-cream { background: var(--color-ice); }
+.block-white { background: var(--color-white); }
+
+.block-dark h1, .block-dark h2, .block-dark h3, .block-dark h4,
+.block-forest h1, .block-forest h2, .block-forest h3, .block-forest h4,
+.block-ember h1, .block-ember h2, .block-ember h3, .block-ember h4 {
+  color: var(--color-white);
+}
+.block-dark p, .block-dark .lead,
+.block-forest p, .block-forest .lead,
+.block-ember p, .block-ember .lead {
+  color: rgba(255,255,255,0.85);
+}
+.block-dark .eyebrow, .block-forest .eyebrow { color: var(--color-blue); }
+.block-ember .eyebrow { color: rgba(255,255,255,0.85); }

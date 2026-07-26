@@ -1,0 +1,8 @@
+{
+  "hubs": {
+    "puerto-varas":   { "fee_clp": 0,      "label_en": "Puerto Varas",          "label_es": "Puerto Varas",                "is_main": true },
+    "puerto-montt":   { "fee_clp": 35000,  "label_en": "Puerto Montt Airport",  "label_es": "Aeropuerto Puerto Montt" },
+    "coyhaique":      { "fee_clp": 600000, "label_en": "Coyhaique (Balmaceda)", "label_es": "Coyhaique (Balmaceda)" },
+    "puerto-natales": { "fee_clp": 900000, "label_en": "Puerto Natales",        "label_es": "Puerto Natales" }
+  }
+}

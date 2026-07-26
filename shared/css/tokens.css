@@ -15,10 +15,10 @@
   --font-display: 'Epilogue', sans-serif;
   --font-body: 'Inter', sans-serif;
 
-  --text-hero: clamp(2rem, 7vw, 3.6rem);
-  --text-h1: clamp(1.75rem, 5vw, 2.75rem);
-  --text-h2: clamp(1.4rem, 3.5vw, 2rem);
-  --text-h3: clamp(1.15rem, 2.5vw, 1.5rem);
+  --text-hero: clamp(2.75rem, 9vw, 5.5rem);
+  --text-h1: clamp(2.2rem, 6vw, 3.75rem);
+  --text-h2: clamp(1.75rem, 4.5vw, 2.75rem);
+  --text-h3: clamp(1.35rem, 3vw, 1.85rem);
   --text-body: 1rem;
   --text-small: 0.875rem;
 
