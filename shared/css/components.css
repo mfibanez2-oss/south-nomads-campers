@@ -342,13 +342,14 @@
 }
 .pill-option.active { background: var(--color-forest); border-color: var(--color-forest); color: var(--color-white); }
 .calc-field label { display: block; font-size: var(--text-small); font-weight: 700; margin-bottom: 6px; color: var(--color-forest-dark); }
-.calc-field select, .calc-field input {
+.calc-field select, .calc-field input, .calc-field textarea {
   width: 100%;
   padding: 10px 14px;
   border-radius: var(--radius-sm);
   border: 1.5px solid var(--color-border);
   font-size: var(--text-body);
   font-family: var(--font-body);
+  resize: vertical;
 }
 .calc-result {
   background: var(--color-white);
