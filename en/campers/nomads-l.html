@@ -160,21 +160,23 @@
     <div class="section-head center">
       <div class="eyebrow">Get A Quote</div>
       <h2>Tell us your trip, we'll get back to you fast</h2>
-      <p class="lead">Pick a month, trip length, and pickup/drop-off — see your estimated price instantly, then send it straight to us on WhatsApp or Email.</p>
+      <p class="lead">Fill in your trip details — see your estimated price instantly, then send it straight to us on WhatsApp or Email.</p>
     </div>
-    <div class="quote-form" data-model="nomads-l" data-model-name="Nomads L" data-lang="en" style="max-width:560px; margin:0 auto;">
+    <div class="quote-form" data-model="nomads-l" data-lang="en" style="max-width:560px; margin:0 auto;">
+      <div class="calc-field">
+        <label>Camper type</label>
+        <select data-role="camper-type"></select>
+      </div>
       <div class="calc-row">
         <div class="calc-field" style="flex:1; min-width:180px;">
-          <label>Travel month</label>
-          <select data-role="month"></select>
+          <label>Pickup date</label>
+          <input type="date" data-role="pickup-date">
+        </div>
+        <div class="calc-field" style="flex:1; min-width:180px;">
+          <label>Drop-off date</label>
+          <input type="date" data-role="dropoff-date">
         </div>
       </div>
-      <div class="calc-field">
-        <label>Trip length (days)</label>
-        <div class="pill-select" data-role="day-pills"></div>
-        <input type="number" data-role="day-custom" min="1" placeholder="Or enter a custom number of days" style="margin-top:10px;">
-      </div>
-      <label class="checkbox-label"><input type="checkbox" data-role="dates-flexible"> My dates are flexible</label>
       <div class="calc-row">
         <div class="calc-field" style="flex:1; min-width:180px;">
           <label>Pickup location</label>
@@ -196,9 +198,13 @@
           <input type="email" data-role="cust-email">
         </div>
         <div class="calc-field" style="flex:1; min-width:180px;">
-          <label>Phone (WhatsApp)</label>
-          <input type="tel" data-role="cust-phone">
+          <label>Phone (with country code)</label>
+          <input type="tel" data-role="cust-phone" placeholder="e.g. +56 9 1234 5678">
         </div>
+      </div>
+      <div class="calc-field">
+        <label>Tell us about your trip (optional)</label>
+        <textarea data-role="cust-comments" rows="3"></textarea>
       </div>
       <label class="checkbox-label"><input type="checkbox" data-role="age-license"> I am at least 25 years old and I possess a valid driver's license</label>
       <div class="calc-row" style="margin-top:8px;">
