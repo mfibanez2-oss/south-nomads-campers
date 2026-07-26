@@ -16,17 +16,34 @@ const STRINGS = {
     sending: 'Sending…',
     sent: "Message sent — we'll get back to you soon.",
     failed: "Something went wrong sending your message. Try WhatsApp instead:",
-    fillRequired: 'Please fill in your name, a valid email, and a message.',
+    missingName: 'your full name', missingEmail: 'a valid email address',
+    missingPhone: 'a complete phone number (with country and area code, not just a country code)',
+    missingMessage: 'a message',
+    fillRequired: (items) => `Please fill in: ${items.join(', ')}.`,
     whatsappCta: 'Chat on WhatsApp',
   },
   es: {
     sending: 'Enviando…',
     sent: 'Mensaje enviado — te respondemos pronto.',
     failed: 'Hubo un problema al enviar tu mensaje. Probá por WhatsApp:',
-    fillRequired: 'Por favor completa tu nombre, un email válido, y un mensaje.',
+    missingName: 'tu nombre completo', missingEmail: 'un email válido',
+    missingPhone: 'un teléfono completo (con código de país y área, no solo el código de país)',
+    missingMessage: 'un mensaje',
+    fillRequired: (items) => `Por favor completa: ${items.join(', ')}.`,
     whatsappCta: 'Chatear por WhatsApp',
   },
 };
+
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+// Rejects inputs like "+1" or "+56" — requires enough digits for a real,
+// complete phone number (country code + area code + subscriber number).
+function isCompletePhone(phone) {
+  const digits = phone.replace(/\D/g, '');
+  return digits.length >= 8;
+}
 
 function initContactForm(el) {
   const lang = el.dataset.lang || 'en';
@@ -42,10 +59,16 @@ function initContactForm(el) {
   sendBtn.addEventListener('click', async () => {
     const name = nameInput.value.trim();
     const email = emailInput.value.trim();
+    const phone = phoneInput.value.trim();
     const message = messageInput.value.trim();
-    const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    if (!name || !emailValid || !message) {
-      statusEl.textContent = t.fillRequired;
+
+    const missing = [];
+    if (!name) missing.push(t.missingName);
+    if (!isValidEmail(email)) missing.push(t.missingEmail);
+    if (!isCompletePhone(phone)) missing.push(t.missingPhone);
+    if (!message) missing.push(t.missingMessage);
+    if (missing.length) {
+      statusEl.textContent = t.fillRequired(missing);
       return;
     }
 
@@ -59,7 +82,7 @@ function initContactForm(el) {
         body: JSON.stringify({
           name,
           email,
-          phone: phoneInput.value.trim(),
+          phone,
           camper: camperSelect.value,
           message,
         }),
