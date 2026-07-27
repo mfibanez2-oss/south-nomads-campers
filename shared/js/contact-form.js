@@ -17,7 +17,6 @@ const STRINGS = {
     failed: "Something went wrong sending your message. Try WhatsApp instead:",
     missingName: 'your full name', missingEmail: 'a valid email address',
     missingPhone: 'a complete phone number (with country and area code, not just a country code)',
-    missingMessage: 'a message',
     missingPickupDate: 'a pick-up date', missingDropoffDate: 'a drop-off date',
     pastPickupDate: 'a pick-up date that is not in the past',
     dropoffBeforePickup: 'a drop-off date on or after the pick-up date',
@@ -29,7 +28,6 @@ const STRINGS = {
     failed: 'Hubo un problema al enviar tu mensaje. Probá por WhatsApp:',
     missingName: 'tu nombre completo', missingEmail: 'un email válido',
     missingPhone: 'un teléfono completo (con código de país y área, no solo el código de país)',
-    missingMessage: 'un mensaje',
     missingPickupDate: 'una fecha de retiro', missingDropoffDate: 'una fecha de devolución',
     pastPickupDate: 'una fecha de retiro que no sea en el pasado',
     dropoffBeforePickup: 'una fecha de devolución igual o posterior a la de retiro',
@@ -88,7 +86,6 @@ function initContactForm(el) {
     if (!name) missing.push(t.missingName);
     if (!isValidEmail(email)) missing.push(t.missingEmail);
     if (!isCompletePhone(phone)) missing.push(t.missingPhone);
-    if (!message) missing.push(t.missingMessage);
     if (!pickupDate) missing.push(t.missingPickupDate);
     else if (pickupDate < today) missing.push(t.pastPickupDate);
     if (!dropoffDate) missing.push(t.missingDropoffDate);
