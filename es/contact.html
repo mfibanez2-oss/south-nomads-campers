@@ -112,6 +112,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <option value="Nomads M">Nomads M</option>
         </select>
       </div>
+      <div class="calc-row">
+        <div class="calc-field" style="flex:1; min-width:180px;">
+          <label>Lugar de retiro</label>
+          <select data-role="pickup-location">
+            <option value="">Todavía no sé</option>
+            <option value="Puerto Varas">Puerto Varas</option>
+            <option value="Puerto Montt Airport">Aeropuerto Puerto Montt</option>
+            <option value="Coyhaique (Balmaceda)">Coyhaique (Balmaceda)</option>
+            <option value="Puerto Natales">Puerto Natales</option>
+          </select>
+        </div>
+        <div class="calc-field" style="flex:1; min-width:180px;">
+          <label>Lugar de devolución</label>
+          <select data-role="dropoff-location">
+            <option value="">Todavía no sé</option>
+            <option value="Puerto Varas">Puerto Varas</option>
+            <option value="Puerto Montt Airport">Aeropuerto Puerto Montt</option>
+            <option value="Coyhaique (Balmaceda)">Coyhaique (Balmaceda)</option>
+            <option value="Puerto Natales">Puerto Natales</option>
+          </select>
+        </div>
+      </div>
+      <div class="calc-row">
+        <div class="calc-field" style="flex:1; min-width:180px;">
+          <label>Fecha de retiro</label>
+          <input type="date" data-role="pickup-date">
+        </div>
+        <div class="calc-field" style="flex:1; min-width:180px;">
+          <label>Fecha de devolución</label>
+          <input type="date" data-role="dropoff-date">
+        </div>
+      </div>
       <div class="calc-field">
         <label>Mensaje</label>
         <textarea data-role="message" rows="4"></textarea>

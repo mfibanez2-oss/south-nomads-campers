@@ -50,6 +50,10 @@ function initContactForm(el) {
   const emailInput = el.querySelector('[data-role="email"]');
   const phoneInput = el.querySelector('[data-role="phone"]');
   const camperSelect = el.querySelector('[data-role="camper"]');
+  const pickupLocationSelect = el.querySelector('[data-role="pickup-location"]');
+  const dropoffLocationSelect = el.querySelector('[data-role="dropoff-location"]');
+  const pickupDateInput = el.querySelector('[data-role="pickup-date"]');
+  const dropoffDateInput = el.querySelector('[data-role="dropoff-date"]');
   const messageInput = el.querySelector('[data-role="message"]');
   const statusEl = el.querySelector('[data-role="form-status"]');
   const sendBtn = el.querySelector('[data-role="send-contact"]');
@@ -82,6 +86,10 @@ function initContactForm(el) {
           email,
           phone,
           camper: camperSelect.value,
+          pickupLocation: pickupLocationSelect.value,
+          dropoffLocation: dropoffLocationSelect.value,
+          pickupDate: pickupDateInput.value,
+          dropoffDate: dropoffDateInput.value,
           message,
         }),
       });
