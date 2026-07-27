@@ -25,7 +25,7 @@ const STRINGS = {
   },
   es: {
     sending: 'Enviando…',
-    failed: 'Hubo un problema al enviar tu mensaje. Probá por WhatsApp:',
+    failed: 'Hubo un problema al enviar tu mensaje. Prueba por WhatsApp:',
     missingName: 'tu nombre completo', missingEmail: 'un email válido',
     missingPhone: 'un teléfono completo (con código de país y área, no solo el código de país)',
     missingPickupDate: 'una fecha de retiro', missingDropoffDate: 'una fecha de devolución',
