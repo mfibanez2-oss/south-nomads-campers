@@ -11,18 +11,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta charset="UTF-8">
 <base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Itinerarios — Rutas de Ejemplo por la Carretera Austral | South Nomads Campers</title>
-<meta name="description" content="Un itinerario de ejemplo de 10 y 21 días por la Carretera Austral para ayudarte a planificar tu roadtrip en camper por la Patagonia.">
+<title>Itinerarios — 4 Rutas por Chile en la Carretera Austral | South Nomads Campers</title>
+<meta name="description" content="Cuatro itinerarios de ejemplo por la Carretera Austral, de 6 a 28 días, desde una escapada a Futaleufú hasta el Patagonia Pass completo — todas dentro de territorio chileno, sin cruzar a Argentina.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Itinerarios — Rutas de Ejemplo por la Carretera Austral | South Nomads Campers">
-<meta property="og:description" content="Un itinerario de ejemplo de 10 y 21 días por la Carretera Austral para ayudarte a planificar tu roadtrip en camper por la Patagonia.">
+<meta property="og:title" content="Itinerarios — 4 Rutas por Chile en la Carretera Austral | South Nomads Campers">
+<meta property="og:description" content="Cuatro itinerarios de ejemplo por la Carretera Austral, de 6 a 28 días, desde una escapada a Futaleufú hasta el Patagonia Pass completo — todas dentro de territorio chileno, sin cruzar a Argentina.">
 <meta property="og:url" content="https://southnomadscampers.com/es/itineraries/index.html">
 <meta property="og:image" content="https://southnomadscampers.com/shared/img/lifestyle/hero-home.jpg">
 <meta property="og:locale" content="es_CL">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Itinerarios — Rutas de Ejemplo por la Carretera Austral | South Nomads Campers">
-<meta name="twitter:description" content="Un itinerario de ejemplo de 10 y 21 días por la Carretera Austral para ayudarte a planificar tu roadtrip en camper por la Patagonia.">
-<meta name="keywords" content="itinerario Carretera Austral, ruta roadtrip Patagonia, ruta camper Chile, itinerario 10 días Patagonia">
+<meta name="twitter:title" content="Itinerarios — 4 Rutas por Chile en la Carretera Austral | South Nomads Campers">
+<meta name="twitter:description" content="Cuatro itinerarios de ejemplo por la Carretera Austral, de 6 a 28 días, desde una escapada a Futaleufú hasta el Patagonia Pass completo — todas dentro de territorio chileno, sin cruzar a Argentina.">
+<meta name="keywords" content="itinerario Carretera Austral, ruta roadtrip Patagonia, ruta camper Chile, itinerario Futaleufú, ruta Villa O'Higgins, itinerario Patagonia Pass, ruta Patagonia solo Chile">
 <link rel="canonical" href="https://southnomadscampers.com/es/itineraries/index.html">
 <link rel="icon" href="favicon.ico">
 <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -32,6 +32,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <style>
 .itinerary-day { display:grid; grid-template-columns:80px 1fr; gap:20px; padding:20px 0; border-bottom:1px solid var(--color-border); }
 .itinerary-day .day-num { font-family:var(--font-display); font-weight:800; font-size:1.4rem; color:var(--color-ember-dark); }
+.itin-tabs { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-bottom:36px; }
+.itin-tab { font-family:var(--font-display); font-weight:700; font-size:0.85rem; letter-spacing:0.01em; padding:12px 20px; border-radius:var(--radius-pill); border:1px solid var(--color-border); background:var(--color-white); cursor:pointer; color:var(--color-ink); text-align:left; line-height:1.3; }
+.itin-tab .tab-days { display:block; font-family:var(--font-body); font-weight:400; font-size:0.78rem; color:var(--color-muted); }
+.itin-tab.active { background:var(--color-forest); border-color:var(--color-forest); color:var(--color-white); }
+.itin-tab.active .tab-days { color:rgba(255,255,255,0.75); }
+.itin-panel { display:none; }
+.itin-panel.active { display:block; }
+.itin-intro { display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between; margin-bottom:20px; }
+.itin-flag { font-size:0.8rem; font-weight:600; color:var(--color-forest); background:rgba(26,71,35,0.08); padding:6px 14px; border-radius:var(--radius-pill); white-space:nowrap; }
 </style>
 </head>
 <body>
@@ -68,53 +77,197 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <section class="hero" style="min-height:380px; background-image:url('shared/img/lifestyle/lifestyle-4.jpg');">
   <div class="container hero-content">
     <div class="eyebrow">Itinerarios</div>
-    <h1>Una ruta de ejemplo por la Carretera Austral</h1>
+    <h1>Cuatro rutas por la Carretera Austral</h1>
   </div>
 </section>
 
 <section class="tight">
   <div class="container">
     <div class="section-head center">
-      <p class="lead">Un punto de partida — cada viaje que planificamos se ajusta a tus fechas, tu ritmo y la camper que reserves.</p>
+      <p class="lead">Un punto de partida — cada viaje que planificamos se ajusta a tus fechas, tu ritmo y la camper que reserves. Todas las rutas de abajo se mantienen dentro de Chile: sin cruce a Argentina, sin depósito extra, sin trámites de frontera.</p>
+    </div>
+
+    <div class="itin-tabs" role="tablist">
+      <button type="button" class="itin-tab active" data-target="route-futa">Escapada a Futaleufú<span class="tab-days">6 Días</span></button>
+      <button type="button" class="itin-tab" data-target="route-classic">Clásico Capillas de Mármol<span class="tab-days">10 Días</span></button>
+      <button type="button" class="itin-tab" data-target="route-deep">Explorador del Sur Profundo<span class="tab-days">16 Días</span></button>
+      <button type="button" class="itin-tab" data-target="route-pass">El Patagonia Pass<span class="tab-days">28 Días</span></button>
     </div>
 
     <div style="max-width:760px; margin:0 auto;">
-      <div class="badge badge-available" style="margin-bottom:16px;">Ruta de 10 días · Puerto Varas → Coyhaique</div>
-      <div class="itinerary-day">
-        <div class="day-num">01</div>
-        <div><h4>Puerto Varas → Puerto Varas</h4><p>Retiro de la camper, inducción, primera noche en un camping junto al lago cerca de Puerto Varas.</p></div>
+
+      <div id="route-futa" class="itin-panel active">
+        <div class="itin-intro">
+          <div class="badge badge-available">Circuito de 6 Días · Puerto Varas → Puerto Varas</div>
+          <div class="itin-flag">🇨🇱 100% Chile</div>
+        </div>
+        <p class="lead" style="margin-bottom:20px;">Una semana corta e intensa para quien no puede tomarse las tres completas: la selva de Pumalín y uno de los mejores ríos de aguas blancas del mundo, sin salir nunca de la ruta costera.</p>
+        <div class="itinerary-day">
+          <div class="day-num">01</div>
+          <div><h4>Puerto Varas → Puerto Varas</h4><p>Retiro de la camper, inducción, primera noche en un camping junto al lago cerca de Puerto Varas.</p></div>
+        </div>
+        <div class="itinerary-day">
+          <div class="day-num">02</div>
+          <div><h4>Hornopirén → Caleta Gonzalo</h4><p>Comienzan los cruces en ferry. Entrada al Parque Pumalín — bosques de alerce, cascadas, paisajes volcánicos.</p></div>
+        </div>
+        <img src="shared/img/patagonia/native-forest.jpg" alt="Sendero de bosque nativo de alerces en el Parque Pumalín" style="width:100%; border-radius:var(--radius-md); margin:20px 0;">
+        <div class="itinerary-day">
+          <div class="day-num">03</div>
+          <div><h4>Chaitén → Futaleufú</h4><p>Hacia el interior, al valle de Futaleufú — agua turquesa, cumbres de granito y rafting de clase mundial.</p></div>
+        </div>
+        <div class="itinerary-day">
+          <div class="day-num">04</div>
+          <div><h4>Futaleufú</h4><p>Un día libre en el valle: rafting en el río, caminatas sobre el pueblo, o simplemente acampar junto al agua sin hacer nada.</p></div>
+        </div>
+        <img src="shared/img/patagonia/turquoise-river.jpg" alt="Río turquesa en el valle de Futaleufú" style="width:100%; border-radius:var(--radius-md); margin:20px 0;">
+        <div class="itinerary-day">
+          <div class="day-num">05</div>
+          <div><h4>Futaleufú → Chaitén</h4><p>De vuelta hacia la costa, una noche más cerca de Pumalín antes de los ferries hacia el norte.</p></div>
+        </div>
+        <div class="itinerary-day">
+          <div class="day-num">06</div>
+          <div><h4>Caleta Gonzalo → Puerto Varas</h4><p>Ferries de regreso al norte y devolución en Puerto Varas — sin costo adicional de hub.</p></div>
+        </div>
       </div>
-      <div class="itinerary-day">
-        <div class="day-num">02–03</div>
-        <div><h4>Hornopirén → Caleta Gonzalo</h4><p>Comienzan los cruces en ferry. Entrada al Parque Pumalín — bosques de alerce, cascadas, paisajes volcánicos.</p></div>
+
+      <div id="route-classic" class="itin-panel">
+        <div class="itin-intro">
+          <div class="badge badge-available">Ruta de 10 Días · Puerto Varas → Coyhaique</div>
+          <div class="itin-flag">🇨🇱 100% Chile</div>
+        </div>
+        <p class="lead" style="margin-bottom:20px;">Nuestra ruta más reservada: toda la mitad norte de la Carretera Austral, terminando en las Capillas de Mármol y Cerro Castillo.</p>
+        <div class="itinerary-day">
+          <div class="day-num">01</div>
+          <div><h4>Puerto Varas → Puerto Varas</h4><p>Retiro de la camper, inducción, primera noche en un camping junto al lago cerca de Puerto Varas.</p></div>
+        </div>
+        <div class="itinerary-day">
+          <div class="day-num">02–03</div>
+          <div><h4>Hornopirén → Caleta Gonzalo</h4><p>Comienzan los cruces en ferry. Entrada al Parque Pumalín — bosques de alerce, cascadas, paisajes volcánicos.</p></div>
+        </div>
+        <img src="shared/img/patagonia/dolphins.jpg" alt="Delfines y un arcoíris sobre un fiordo patagónico" style="width:100%; border-radius:var(--radius-md); margin:20px 0;">
+        <div class="itinerary-day">
+          <div class="day-num">04–05</div>
+          <div><h4>Chaitén → Puyuhuapi</h4><p>Vistas de fiordos costeros y termas en Puyuhuapi. El glaciar colgante del Parque Queulat.</p></div>
+        </div>
+        <div class="itinerary-day">
+          <div class="day-num">06–07</div>
+          <div><h4>Puerto Cisnes → Puerto Río Tranquilo</h4><p>Salida en bote a las Capillas de Mármol en el Lago General Carrera — uno de los puntos más altos del viaje.</p></div>
+        </div>
+        <img src="shared/img/patagonia/guanaco.jpg" alt="Guanacos al amanecer cerca de Cerro Castillo" style="width:100%; border-radius:var(--radius-md); margin:20px 0;">
+        <div class="itinerary-day">
+          <div class="day-num">08–09</div>
+          <div><h4>Cerro Castillo</h4><p>Día de trekking alrededor del macizo de Cerro Castillo, una de las mejores caminatas de la Carretera Austral.</p></div>
+        </div>
+        <div class="itinerary-day">
+          <div class="day-num">10</div>
+          <div><h4>Coyhaique</h4><p>Devolución en Coyhaique (Balmaceda) — o sigue con el Explorador del Sur Profundo o el Patagonia Pass.</p></div>
+        </div>
       </div>
-      <img src="shared/img/patagonia/dolphins.jpg" alt="Delfines y un arcoíris sobre un fiordo patagónico" style="width:100%; border-radius:var(--radius-md); margin:20px 0;">
-      <div class="itinerary-day">
-        <div class="day-num">04–05</div>
-        <div><h4>Chaitén → Puyuhuapi</h4><p>Vistas de fiordos costeros y termas en Puyuhuapi. El glaciar colgante del Parque Queulat.</p></div>
+
+      <div id="route-deep" class="itin-panel">
+        <div class="itin-intro">
+          <div class="badge badge-available">Ruta de 16 Días · Puerto Varas → Coyhaique</div>
+          <div class="itin-flag">🇨🇱 100% Chile</div>
+        </div>
+        <p class="lead" style="margin-bottom:20px;">Todo lo del Clásico, más el sur profundo y poco visitado de la Carretera Austral — hasta Villa O'Higgins, tan al sur como llega cualquier camino en Chile sin cruzar a Argentina.</p>
+        <div class="itinerary-day">
+          <div class="day-num">01</div>
+          <div><h4>Puerto Varas → Puerto Varas</h4><p>Retiro de la camper, inducción, primera noche en un camping junto al lago cerca de Puerto Varas.</p></div>
+        </div>
+        <div class="itinerary-day">
+          <div class="day-num">02–03</div>
+          <div><h4>Hornopirén → Caleta Gonzalo</h4><p>Comienzan los cruces en ferry. Entrada al Parque Pumalín — bosques de alerce, cascadas, paisajes volcánicos.</p></div>
+        </div>
+        <div class="itinerary-day">
+          <div class="day-num">04–05</div>
+          <div><h4>Chaitén → Puyuhuapi</h4><p>Vistas de fiordos costeros y termas en Puyuhuapi. El glaciar colgante del Parque Queulat.</p></div>
+        </div>
+        <img src="shared/img/patagonia/marble-caves.jpg" alt="Capillas de Mármol en el Lago General Carrera" style="width:100%; border-radius:var(--radius-md); margin:20px 0;">
+        <div class="itinerary-day">
+          <div class="day-num">06–07</div>
+          <div><h4>Puerto Cisnes → Puerto Río Tranquilo</h4><p>Salida en bote a las Capillas de Mármol en el Lago General Carrera.</p></div>
+        </div>
+        <div class="itinerary-day">
+          <div class="day-num">08</div>
+          <div><h4>Puerto Bertrand</h4><p>Acampa junto al Río Baker, uno de los ríos más caudalosos de Chile, azul glaciar y rugiente.</p></div>
+        </div>
+        <div class="itinerary-day">
+          <div class="day-num">09–10</div>
+          <div><h4>Cochrane → Caleta Tortel</h4><p>Un desvío a Caleta Tortel — un pueblo sin calles, solo pasarelas de ciprés sobre el agua.</p></div>
+        </div>
+        <img src="shared/img/patagonia/glacier.jpg" alt="Glaciar cerca de Villa O'Higgins" style="width:100%; border-radius:var(--radius-md); margin:20px 0;">
+        <div class="itinerary-day">
+          <div class="day-num">11–12</div>
+          <div><h4>Villa O'Higgins</h4><p>El final de la Carretera Austral. Caminata al mirador del Glaciar Montt, y luego a acampar bajo uno de los cielos más oscuros de la Patagonia.</p></div>
+        </div>
+        <div class="itinerary-day">
+          <div class="day-num">13–14</div>
+          <div><h4>Villa O'Higgins → Cochrane</h4><p>De vuelta por el mismo camino hacia el norte, esta vez con más calma.</p></div>
+        </div>
+        <div class="itinerary-day">
+          <div class="day-num">15</div>
+          <div><h4>Cerro Castillo</h4><p>Una última noche cerca del macizo de Cerro Castillo antes de llegar.</p></div>
+        </div>
+        <div class="itinerary-day">
+          <div class="day-num">16</div>
+          <div><h4>Coyhaique</h4><p>Devolución en Coyhaique (Balmaceda).</p></div>
+        </div>
       </div>
-      <div class="itinerary-day">
-        <div class="day-num">06–07</div>
-        <div><h4>Puerto Cisnes → Puerto Río Tranquilo</h4><p>Salida en bote a las Capillas de Mármol en el Lago General Carrera — uno de los puntos más altos del viaje.</p></div>
+
+      <div id="route-pass" class="itin-panel">
+        <div class="itin-intro">
+          <div class="badge badge-available">Ruta de 28 Días · Puerto Varas → Puerto Natales</div>
+          <div class="itin-flag">🇨🇱 100% Chile</div>
+        </div>
+        <p class="lead" style="margin-bottom:20px;">Nuestro producto insignia: una expedición fija de 28 días desde la zona de los lagos hasta Torres del Paine. El camino habitual al sur de Villa O'Higgins es un desvío por Argentina — en cambio, nosotros cruzamos ese tramo en ferry, así que todo el viaje se mantiene en territorio chileno.</p>
+        <div class="itinerary-day">
+          <div class="day-num">01</div>
+          <div><h4>Puerto Varas → Puerto Varas</h4><p>Retiro de la camper, inducción, primera noche en un camping junto al lago cerca de Puerto Varas.</p></div>
+        </div>
+        <div class="itinerary-day">
+          <div class="day-num">02–05</div>
+          <div><h4>Hornopirén → Chaitén → Puyuhuapi</h4><p>Cruces en ferry, Parque Pumalín, fiordos costeros y las termas de Puyuhuapi.</p></div>
+        </div>
+        <img src="shared/img/patagonia/marble-caves.jpg" alt="Capillas de Mármol en el Lago General Carrera" style="width:100%; border-radius:var(--radius-md); margin:20px 0;">
+        <div class="itinerary-day">
+          <div class="day-num">06–08</div>
+          <div><h4>Puerto Cisnes → Puerto Río Tranquilo</h4><p>Las Capillas de Mármol, y un día de descanso antes del sur profundo.</p></div>
+        </div>
+        <div class="itinerary-day">
+          <div class="day-num">09–11</div>
+          <div><h4>Puerto Bertrand → Cochrane → Caleta Tortel</h4><p>El Río Baker, y luego el pueblo de pasarelas de Caleta Tortel.</p></div>
+        </div>
+        <div class="itinerary-day">
+          <div class="day-num">12–14</div>
+          <div><h4>Villa O'Higgins</h4><p>El final del camino. Caminata al glaciar y un par de noches de descanso antes del tramo en ferry.</p></div>
+        </div>
+        <img src="shared/img/patagonia/torres-del-paine.jpg" alt="Torres del Paine, torres de granito" style="width:100%; border-radius:var(--radius-md); margin:20px 0;">
+        <div class="itinerary-day">
+          <div class="day-num">15–17</div>
+          <div><h4>Ferry hacia el sur, a Puerto Natales</h4><p>En vez del desvío por Argentina, llevamos la camper y a ti hacia el sur en ferry — el único puente 100% chileno sobre el tramo faltante de la Carretera Austral. La logística la manejamos nosotros; te damos más detalle al reservar.</p></div>
+        </div>
+        <div class="itinerary-day">
+          <div class="day-num">18–26</div>
+          <div><h4>Torres del Paine y Puerto Natales</h4><p>El corazón del viaje: el trekking W o el O, el Glaciar Grey, manadas de guanacos y, si tienes paciencia, algún puma al amanecer.</p></div>
+        </div>
+        <div class="itinerary-day">
+          <div class="day-num">27–28</div>
+          <div><h4>Puerto Natales</h4><p>Últimas noches en el pueblo, devolución en nuestro hub de Puerto Natales.</p></div>
+        </div>
+        <div style="text-align:center; margin-top:28px;">
+          <a href="https://patagonia-pass.netlify.app" target="_blank" rel="noopener" class="btn btn-primary">Ver Fechas y Precios del Patagonia Pass →</a>
+        </div>
       </div>
-      <img src="shared/img/patagonia/guanaco.jpg" alt="Guanacos al amanecer cerca de Cerro Castillo" style="width:100%; border-radius:var(--radius-md); margin:20px 0;">
-      <div class="itinerary-day">
-        <div class="day-num">08–09</div>
-        <div><h4>Cerro Castillo</h4><p>Día de trekking alrededor del macizo de Cerro Castillo, una de las mejores caminatas de la Carretera Austral.</p></div>
-      </div>
-      <div class="itinerary-day">
-        <div class="day-num">10</div>
-        <div><h4>Coyhaique</h4><p>Devolución en Coyhaique, o continúa hacia el sur rumbo a Puerto Natales y Torres del Paine con más días.</p></div>
-      </div>
+
     </div>
   </div>
 </section>
 
 <section class="block-ember" style="text-align:center;">
   <div class="container" style="max-width:640px;">
-    <h2>¿Quieres la versión completa de 28 días?</h2>
-    <p class="lead">El Patagonia Pass extiende esta ruta hasta Torres del Paine, con fechas fijas y todo incluido.</p>
-    <a href="es/pass.html" class="btn btn-ghost">Ver el Patagonia Pass</a>
+    <h2>¿No sabes qué ruta se ajusta a tus fechas?</h2>
+    <p class="lead">Cuéntanos cuántos días tienes y armamos la ruta a tu medida.</p>
+    <a href="es/contact.html" class="btn btn-ghost">Hablemos</a>
   </div>
 </section>
 
@@ -164,5 +317,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <script src="shared/js/nav.js"></script>
 <script src="shared/js/lang-toggle.js"></script>
+<script>
+document.querySelectorAll('.itin-tab').forEach(function(tab){
+  tab.addEventListener('click', function(){
+    document.querySelectorAll('.itin-tab').forEach(function(t){ t.classList.remove('active'); });
+    document.querySelectorAll('.itin-panel').forEach(function(p){ p.classList.remove('active'); });
+    tab.classList.add('active');
+    document.getElementById(tab.dataset.target).classList.add('active');
+  });
+});
+</script>
 </body>
 </html>
