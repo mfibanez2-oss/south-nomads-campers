@@ -7,7 +7,7 @@
 
 const WORKER_BASE_URL = location.hostname === 'localhost'
   ? 'http://localhost:8787'
-  : 'https://south-nomads-booking-api.workers.dev'; // replace with the real *.workers.dev URL after `wrangler deploy`
+  : 'https://south-nomads-booking-api.mfibanez2.workers.dev';
 
 const WHATSAPP_URL = 'https://wa.link/m2ahp2';
 
