@@ -18,6 +18,9 @@ const STRINGS = {
     missingName: 'your full name', missingEmail: 'a valid email address',
     missingPhone: 'a complete phone number (with country and area code, not just a country code)',
     missingMessage: 'a message',
+    missingPickupDate: 'a pick-up date', missingDropoffDate: 'a drop-off date',
+    pastPickupDate: 'a pick-up date that is not in the past',
+    dropoffBeforePickup: 'a drop-off date on or after the pick-up date',
     fillRequired: (items) => `Please fill in: ${items.join(', ')}.`,
     whatsappCta: 'Chat on WhatsApp',
   },
@@ -27,10 +30,18 @@ const STRINGS = {
     missingName: 'tu nombre completo', missingEmail: 'un email válido',
     missingPhone: 'un teléfono completo (con código de país y área, no solo el código de país)',
     missingMessage: 'un mensaje',
+    missingPickupDate: 'una fecha de retiro', missingDropoffDate: 'una fecha de devolución',
+    pastPickupDate: 'una fecha de retiro que no sea en el pasado',
+    dropoffBeforePickup: 'una fecha de devolución igual o posterior a la de retiro',
     fillRequired: (items) => `Por favor completa: ${items.join(', ')}.`,
     whatsappCta: 'Chatear por WhatsApp',
   },
 };
+
+function todayISO() {
+  const now = new Date();
+  return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+}
 
 function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -58,17 +69,30 @@ function initContactForm(el) {
   const statusEl = el.querySelector('[data-role="form-status"]');
   const sendBtn = el.querySelector('[data-role="send-contact"]');
 
+  const today = todayISO();
+  pickupDateInput.min = today;
+  dropoffDateInput.min = today;
+  pickupDateInput.addEventListener('change', () => {
+    if (pickupDateInput.value) dropoffDateInput.min = pickupDateInput.value;
+  });
+
   sendBtn.addEventListener('click', async () => {
     const name = nameInput.value.trim();
     const email = emailInput.value.trim();
     const phone = phoneInput.value.trim();
     const message = messageInput.value.trim();
+    const pickupDate = pickupDateInput.value;
+    const dropoffDate = dropoffDateInput.value;
 
     const missing = [];
     if (!name) missing.push(t.missingName);
     if (!isValidEmail(email)) missing.push(t.missingEmail);
     if (!isCompletePhone(phone)) missing.push(t.missingPhone);
     if (!message) missing.push(t.missingMessage);
+    if (!pickupDate) missing.push(t.missingPickupDate);
+    else if (pickupDate < today) missing.push(t.pastPickupDate);
+    if (!dropoffDate) missing.push(t.missingDropoffDate);
+    else if (pickupDate && dropoffDate < pickupDate) missing.push(t.dropoffBeforePickup);
     if (missing.length) {
       statusEl.textContent = t.fillRequired(missing);
       return;
@@ -88,8 +112,8 @@ function initContactForm(el) {
           camper: camperSelect.value,
           pickupLocation: pickupLocationSelect.value,
           dropoffLocation: dropoffLocationSelect.value,
-          pickupDate: pickupDateInput.value,
-          dropoffDate: dropoffDateInput.value,
+          pickupDate,
+          dropoffDate,
           message,
         }),
       });
