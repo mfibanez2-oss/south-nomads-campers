@@ -24,6 +24,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="twitter:description" content="Escríbenos por WhatsApp o email. Con base en Puerto Varas, Chile — respondemos cada mensaje personalmente.">
 <meta name="keywords" content="contacto South Nomads Campers, arriendo camper Puerto Varas contacto, WhatsApp camper Chile">
 <link rel="canonical" href="https://southnomadscampers.com/es/contact.html">
+<link rel="alternate" hreflang="en" href="https://southnomadscampers.com/en/contact.html">
+<link rel="alternate" hreflang="es" href="https://southnomadscampers.com/es/contact.html">
+<link rel="alternate" hreflang="x-default" href="https://southnomadscampers.com/en/contact.html">
 <link rel="icon" href="favicon.ico">
 <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared/css/tokens.css">
@@ -134,14 +137,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </select>
         </div>
       </div>
-      <div class="calc-row">
-        <div class="calc-field" style="flex:1; min-width:180px;">
-          <label>Fecha de retiro</label>
-          <input type="date" data-role="pickup-date">
-        </div>
-        <div class="calc-field" style="flex:1; min-width:180px;">
-          <label>Fecha de devolución</label>
-          <input type="date" data-role="dropoff-date">
+      <div class="calc-field">
+        <label>Fechas del viaje</label>
+        <div class="date-range-field" data-role="date-range" data-lang="es">
+          <button type="button" class="date-range-trigger" data-role="date-range-trigger">
+            <span data-role="date-range-display"></span>
+          </button>
+          <input type="hidden" data-role="pickup-date">
+          <input type="hidden" data-role="dropoff-date">
+          <div class="date-range-popover" data-role="date-range-popover" hidden></div>
         </div>
       </div>
       <div class="calc-field">
@@ -211,6 +215,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <script src="shared/js/nav.js"></script>
 <script src="shared/js/lang-toggle.js"></script>
+<script src="shared/js/date-range-picker.js"></script>
 <script src="shared/js/contact-form.js"></script>
 </body>
 </html>

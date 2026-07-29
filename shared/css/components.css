@@ -501,3 +501,91 @@
 @media (min-width: 769px) {
   .wa-float { bottom: var(--space-3); }
 }
+
+/* ---------- Email copy toast ---------- */
+.email-toast {
+  position: fixed;
+  left: 50%;
+  bottom: var(--space-3);
+  transform: translate(-50%, 16px);
+  z-index: 600;
+  background: var(--color-forest-dark);
+  color: var(--color-white);
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  font-size: var(--text-small);
+  font-weight: 600;
+  box-shadow: var(--shadow-soft);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.email-toast.visible { opacity: 1; transform: translate(-50%, 0); }
+
+/* ---------- Date range picker ---------- */
+.date-range-field { position: relative; }
+.date-range-trigger {
+  width: 100%;
+  text-align: left;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--color-border);
+  background: var(--color-white);
+  font-size: var(--text-body);
+  font-family: var(--font-body);
+  color: var(--color-muted);
+  cursor: pointer;
+}
+.date-range-trigger [data-role="date-range-display"].has-value { color: var(--color-ink); font-weight: 600; }
+.date-range-field.open .date-range-trigger { border-color: var(--color-forest); }
+.date-range-popover {
+  position: absolute;
+  z-index: 200;
+  top: calc(100% + 8px);
+  left: 0;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--color-border);
+  padding: var(--space-3);
+  width: max-content;
+  max-width: min(640px, calc(100vw - 32px));
+}
+.drp-nav { display: flex; justify-content: space-between; margin-bottom: var(--space-2); }
+.drp-nav-btn {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: var(--color-forest-dark);
+}
+.drp-nav-btn:hover { background: var(--color-ice); }
+.drp-months { display: flex; gap: var(--space-4); flex-wrap: wrap; }
+.drp-month { width: 252px; }
+.drp-month-heading { font-family: var(--font-display); font-weight: 700; text-align: center; margin-bottom: var(--space-2); color: var(--color-forest-dark); }
+.drp-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; }
+.drp-weekday { text-align: center; font-size: 0.7rem; font-weight: 700; color: var(--color-muted); padding-bottom: 6px; }
+.drp-day {
+  aspect-ratio: 1 / 1;
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  cursor: pointer;
+  color: var(--color-ink);
+}
+.drp-day:hover:not(:disabled) { background: var(--color-ice); }
+.drp-day.is-disabled { color: var(--color-border); cursor: not-allowed; }
+.drp-day.is-in-range, .drp-day.is-end-preview { background: var(--color-ice); border-radius: 0; }
+.drp-day.is-start, .drp-day.is-end { background: var(--color-forest); color: var(--color-white); border-radius: 50%; position: relative; z-index: 1; }
+.drp-footer { margin-top: var(--space-2); text-align: right; }
+.drp-clear { background: none; border: none; text-decoration: underline; font-size: var(--text-small); color: var(--color-muted); cursor: pointer; }
+@media (max-width: 640px) {
+  .date-range-popover { left: 50%; transform: translateX(-50%); }
+  .drp-months { gap: var(--space-2); }
+  .drp-month { width: 44vw; min-width: 220px; }
+}
