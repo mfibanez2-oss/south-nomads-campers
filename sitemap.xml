@@ -2,22 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://southnomadscampers.com/en/index.html</loc></url>
   <url><loc>https://southnomadscampers.com/es/index.html</loc></url>
-  <url><loc>https://southnomadscampers.com/en/campers/nomads-l.html</loc></url>
-  <url><loc>https://southnomadscampers.com/es/campers/nomads-l.html</loc></url>
-  <url><loc>https://southnomadscampers.com/en/campers/nomads-m.html</loc></url>
-  <url><loc>https://southnomadscampers.com/es/campers/nomads-m.html</loc></url>
+  <url><loc>https://southnomadscampers.com/en/campers/nomads-l/</loc></url>
+  <url><loc>https://southnomadscampers.com/es/campers/nomads-l/</loc></url>
+  <url><loc>https://southnomadscampers.com/en/campers/nomads-m/</loc></url>
+  <url><loc>https://southnomadscampers.com/es/campers/nomads-m/</loc></url>
   <url><loc>https://southnomadscampers.com/en/destinations/index.html</loc></url>
   <url><loc>https://southnomadscampers.com/es/destinations/index.html</loc></url>
   <url><loc>https://southnomadscampers.com/en/hubs/index.html</loc></url>
   <url><loc>https://southnomadscampers.com/es/hubs/index.html</loc></url>
   <url><loc>https://southnomadscampers.com/en/itineraries/index.html</loc></url>
-  <url><loc>https://southnomadscampers.com/es/itineraries/index.html</loc></url>
+  <url><loc>https://southnomadscampers.com/es/itinerarios/</loc></url>
   <url><loc>https://southnomadscampers.com/en/faq/index.html</loc></url>
   <url><loc>https://southnomadscampers.com/es/faq/index.html</loc></url>
   <url><loc>https://southnomadscampers.com/en/reviews.html</loc></url>
   <url><loc>https://southnomadscampers.com/es/reviews.html</loc></url>
-  <url><loc>https://southnomadscampers.com/en/pass.html</loc></url>
-  <url><loc>https://southnomadscampers.com/es/pass.html</loc></url>
+  <url><loc>https://southnomadscampers.com/en/patagonia-pass/</loc></url>
+  <url><loc>https://southnomadscampers.com/es/patagonia-pass/</loc></url>
   <url><loc>https://southnomadscampers.com/en/contact.html</loc></url>
   <url><loc>https://southnomadscampers.com/es/contact.html</loc></url>
 </urlset>
