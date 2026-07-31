@@ -228,7 +228,12 @@ function initPicker(root) {
   }
 
   function onOutsideClick(e) {
-    if (!root.contains(e.target)) close();
+    // Use composedPath (frozen at dispatch time) instead of root.contains(e.target):
+    // selecting a day re-renders the popover's DOM mid-click, detaching the
+    // clicked button, so by the time this bubbles up e.target is no longer
+    // contained in root even though the click was inside the picker.
+    const path = e.composedPath ? e.composedPath() : [];
+    if (!path.includes(root)) close();
   }
 
   trigger.addEventListener('click', () => {
