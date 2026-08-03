@@ -228,7 +228,13 @@ function initPicker(root) {
   }
 
   function onOutsideClick(e) {
-    if (!root.contains(e.target)) close();
+    // Use composedPath (captured when the event was dispatched) instead of
+    // root.contains(e.target): day/nav button clicks call renderAll(), which
+    // replaces the popover's innerHTML and detaches the clicked button from
+    // the DOM *before* this bubbles up here — root.contains(e.target) would
+    // then wrongly read as "outside" and self-close the popover on every click.
+    const path = e.composedPath ? e.composedPath() : [];
+    if (!path.includes(root)) close();
   }
 
   trigger.addEventListener('click', () => {
