@@ -8,19 +8,7 @@
       },
       {
         "q": "¿Ofrecen descuentos por arriendos largos?",
-        "a": "<p>Sí.</p><p>Ofrecemos tarifas reducidas para viajes de <strong>15 días o más</strong> — la Patagonia se disfruta mejor con calma, y los roadtrips más largos suelen tener mejor precio.</p><p>Y si te vas a ir con todo, creamos el <strong>Patagonia Pass</strong>: un bloque fijo de <strong>28 días</strong> a una tarifa plana que le gana a cualquier otra opción del mercado. Sin tarifas diarias, sin extensiones que negociar — solo un precio imbatible por cuatro semanas completas por la Patagonia. <a href=\"https://patagonia-pass.netlify.app/\" target=\"_blank\" rel=\"noopener\">Conoce el Patagonia Pass →</a></p>"
-      },
-      {
-        "q": "¿Qué es el Patagonia Pass?",
-        "a": "<p>El Patagonia Pass es nuestro bloque de arriendo a precio fijo y fecha fija: <strong>28 días completos</strong> con una camper 4x4 totalmente equipada, por una tarifa plana — sin cobro día a día, sin sorpresas.</p><p>La retiras, avanzas tan lejos y tan despacio como quieras por la Carretera Austral, y la devuelves exactamente cuatro semanas después. Somos el único operador en Chile que ofrece bloques preestablecidos de 28 días a precio fijo.</p><p><strong>Ojo:</strong> solo tenemos <strong>2 campers</strong> disponibles para la Temporada Alta 2026/27, y los bloques se están agotando rápido. <a href=\"https://patagonia-pass.netlify.app/\" target=\"_blank\" rel=\"noopener\">Ver meses disponibles →</a></p>"
-      },
-      {
-        "q": "¿Por qué el Patagonia Pass es más barato que un arriendo normal?",
-        "a": "<p>Porque te comprometes temprano, y nosotros respondemos con nuestra mejor tarifa posible. Reservar 28 días de la forma tradicional corre con el precio diario estándar — el Patagonia Pass fija una tarifa diaria plana y más baja para todo el bloque.</p><p>Eso puede significar ahorros de <strong>hasta USD 1.000</strong> comparado con reservar las mismas fechas día a día — además aseguras tu camper antes de que se agote la temporada alta.</p><p><a href=\"https://patagonia-pass.netlify.app/#calculator\" target=\"_blank\" rel=\"noopener\">Ver tu precio exacto →</a></p>"
-      },
-      {
-        "q": "¿Cómo reservo mi Patagonia Pass?",
-        "a": "<p>Entra a la landing page del Patagonia Pass, elige tu mes, y mira tu precio exacto en pesos chilenos con una calculadora de tipo de cambio en vivo.</p><p>Un <strong>depósito del 50%</strong> asegura tu bloque online hoy mismo; el 50% restante se paga al retirar en Puerto Varas. Simple, transparente, sin costos ocultos.</p><p><a href=\"https://patagonia-pass.netlify.app/#calculator\" target=\"_blank\" rel=\"noopener\">Reserva tu Patagonia Pass →</a></p>"
+        "a": "<p>Sí.</p><p>Ofrecemos tarifas reducidas para viajes de <strong>15 días o más</strong> — la Patagonia se disfruta mejor con calma, y los roadtrips más largos suelen tener mejor precio.</p>"
       },
       {
         "q": "¿Qué métodos de pago aceptan?",

@@ -14,7 +14,7 @@ Positioning is honest, not inflated: a new company (not "since 2014"), but one t
 - Reusable CSS utility classes (`.block-dark`, `.block-forest`, `.block-ember`, `.block-cream`, `.block-white` in `shared/css/base.css`) so any section can take the treatment with one class, text colors auto-adjust for contrast.
 
 ## Site structure
-Static HTML/CSS/vanilla JS, **no build step**, no framework — hosted on GitHub Pages. Fully bilingual, `en/` and `es/` trees mirror each other page-for-page. Pages: Home, Nomads L, Nomads M, Destinations, Itineraries, Rental Hubs, FAQ, About Us, Reviews, Contact, and a cross-promo link out to the Patagonia Pass (a separate 28-day flagship product on its own Netlify funnel).
+Static HTML/CSS/vanilla JS, **no build step**, no framework — hosted on GitHub Pages. Fully bilingual, `en/` and `es/` trees mirror each other page-for-page. Pages: Home, Nomads L, Nomads M, Destinations, Itineraries, Rental Hubs, FAQ, About Us, Reviews, Contact.
 
 ## Booking/quote flow — current, live
 Each camper page has a **"Get a Quote"** section (ember block) with:

@@ -8,19 +8,7 @@
       },
       {
         "q": "Do you offer discounts for long-term rentals?",
-        "a": "<p>Yes.</p><p>We offer reduced rates for trips of <strong>15 days or longer</strong> — Patagonia is best experienced slowly, and longer road trips usually get better pricing.</p><p>And if you're going all in, we created the <strong>Patagonia Pass</strong>: a fixed <strong>28-day block</strong> at one flat rate that beats anything else on the market. No daily rates, no extensions to negotiate — just one unbeatable price for four full weeks across Patagonia. <a href=\"https://patagonia-pass.netlify.app/\" target=\"_blank\" rel=\"noopener\">Check out the Patagonia Pass →</a></p>"
-      },
-      {
-        "q": "What is the Patagonia Pass?",
-        "a": "<p>The Patagonia Pass is our fixed-price, fixed-date rental block: <strong>28 full days</strong> with a fully equipped 4x4 camper, for one flat rate — no day-by-day billing, no surprises.</p><p>Pick it up, go as far and as slow as you want along the Carretera Austral, and return it exactly four weeks later. We're the only operator in Chile offering pre-set 28-day blocks at a fixed price.</p><p><strong>Heads up:</strong> we only have <strong>2 campers</strong> available for High Season 2026/27, and blocks are going fast. <a href=\"https://patagonia-pass.netlify.app/\" target=\"_blank\" rel=\"noopener\">See available months →</a></p>"
-      },
-      {
-        "q": "Why is the Patagonia Pass cheaper than a regular rental?",
-        "a": "<p>Because you commit early, and we commit right back with our best possible rate. Booking 28 days the regular way runs at standard daily pricing — the Patagonia Pass locks in a lower, flat daily rate for the whole block instead.</p><p>That can mean savings of <strong>up to $1,000 USD</strong> compared to booking the same dates day by day — plus you guarantee your camper before high season sells out.</p><p><a href=\"https://patagonia-pass.netlify.app/#calculator\" target=\"_blank\" rel=\"noopener\">See your exact price →</a></p>"
-      },
-      {
-        "q": "How do I reserve my Patagonia Pass?",
-        "a": "<p>Head to the Patagonia Pass landing page, pick your month, and see your exact price in Chilean pesos with a live exchange-rate calculator.</p><p>A <strong>50% deposit</strong> secures your block online today; the remaining 50% is paid at pick-up in Puerto Varas. Simple, transparent, no hidden fees.</p><p><a href=\"https://patagonia-pass.netlify.app/#calculator\" target=\"_blank\" rel=\"noopener\">Reserve your Patagonia Pass →</a></p>"
+        "a": "<p>Yes.</p><p>We offer reduced rates for trips of <strong>15 days or longer</strong> — Patagonia is best experienced slowly, and longer road trips usually get better pricing.</p>"
       },
       {
         "q": "What payment methods do you accept?",

@@ -40,12 +40,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "name": "Nomads M Camper Truck",
   "description": "Camper truck 4x4 compacta para 2 personas, con base en Puerto Varas, Chile, construida para la Carretera Austral y la Patagonia chilena.",
   "brand": { "@type": "Brand", "name": "South Nomads Campers" },
+  "image": [
+    "https://southnomadscampers.com/shared/img/nomads-m/exterior-front.jpg",
+    "https://southnomadscampers.com/shared/img/nomads-m/exterior-side.jpg",
+    "https://southnomadscampers.com/shared/img/nomads-m/interior-1.jpg"
+  ],
   "offers": {
     "@type": "Offer",
     "priceCurrency": "CLP",
     "price": "117000",
     "availability": "https://schema.org/InStock",
-    "url": "https://southnomadscampers.com/es/campers/nomads-m/"
+    "url": "https://southnomadscampers.com/es/campers/nomads-m/",
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "CL",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+    },
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "CLP" },
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "CL" },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY" }
+      }
+    }
   }
 }
 </script>
@@ -70,7 +90,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <a href="es/hubs/index.html">Puntos de Retiro</a>
       <a href="es/itinerarios/">Itinerarios</a>
       <a href="es/faq/index.html">FAQs</a>
-      <a href="es/patagonia-pass/">Patagonia Pass 28D</a>
       <a href="es/about/index.html">Sobre Nosotros</a>
     </nav>
     <div class="nav-actions">
