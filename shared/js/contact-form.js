@@ -1,8 +1,8 @@
 // Contact form — posts to the south-nomads-booking-api Worker's /contact
-// endpoint, which emails the captured info to josefina@ and rodrigo@ via
-// Resend. Requires that Worker to be deployed and Resend's domain
-// verification for southnomadscampers.com to be complete; until then this
-// will fail gracefully and point the visitor to WhatsApp instead.
+// endpoint, which logs the lead to the owner's Google Sheet (Apps Script
+// handles emailing josefina@/rodrigo@ and the customer from there). If the
+// Worker is unreachable or rejects the payload, this fails gracefully and
+// points the visitor to WhatsApp instead.
 (function () {
 
 const WORKER_BASE_URL = location.hostname === 'localhost'
@@ -115,6 +115,11 @@ function initContactForm(el) {
         }),
       });
       if (!res.ok) throw new Error('send failed');
+      // Flag consumed once by GTM's conversion trigger on thank-you.html (then
+      // cleared) so refreshes, back-button revisits, or someone bookmarking/
+      // direct-navigating to thank-you.html don't re-fire generate_lead — only
+      // this exact arrival, right after a real successful submission, does.
+      try { sessionStorage.setItem('sncLeadJustSubmitted', '1'); } catch (e) {}
       // Full page navigation (not fetch/SPA) so GTM sees a real pageview on
       // the thank-you page — that pageview is the Google Ads conversion signal.
       window.location.href = lang === 'es' ? 'es/thank-you.html' : 'en/thank-you.html';
