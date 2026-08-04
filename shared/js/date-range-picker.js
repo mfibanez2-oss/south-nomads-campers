@@ -54,6 +54,9 @@ function initPicker(root) {
   let start = pickupInput.value ? startOfDay(fromISO(pickupInput.value)) : null;
   let end = dropoffInput.value ? startOfDay(fromISO(dropoffInput.value)) : null;
   let hoverDate = null;
+  // Buttons from the most recent renderAll(), reused by updateHoverClasses()
+  // so hovering never tears down/rebuilds the grid (see below).
+  let dayButtons = [];
 
   function setHiddenInputs() {
     const pickupVal = start ? toISO(start) : '';
@@ -129,13 +132,12 @@ function initPicker(root) {
       }
       if (start && date.getTime() === start.getTime()) btn.classList.add('is-start');
       if (end && date.getTime() === end.getTime()) btn.classList.add('is-end');
-      if (start && !end && hoverDate && date.getTime() === hoverDate.getTime() && date >= start) btn.classList.add('is-end-preview');
-      if (inRange(date)) btn.classList.add('is-in-range');
+      if (!isPast) dayButtons.push({ btn, date });
 
       btn.addEventListener('mouseenter', () => {
         if (start && !end) {
           hoverDate = date;
-          renderAll();
+          updateHoverClasses();
         }
       });
       btn.addEventListener('click', () => {
@@ -148,6 +150,7 @@ function initPicker(root) {
         } else {
           end = date;
         }
+        hoverDate = null;
         setHiddenInputs();
         updateDisplay();
         renderAll();
@@ -161,7 +164,23 @@ function initPicker(root) {
     return wrap;
   }
 
+  // Toggles is-in-range/is-end-preview on the existing buttons from the last
+  // renderAll() — no DOM teardown. This runs on every mouseenter while the
+  // user drags across days toward the drop-off date; rebuilding the whole
+  // grid there (as this used to do, via renderAll()) replaced the button
+  // sitting under the cursor on every single cell crossed, which could make
+  // the browser fail to synthesize a 'click' for the final mousedown/mouseup
+  // if that swap landed at the wrong instant — drop-off dates became
+  // unclickable in practice even though the hover preview rendered fine.
+  function updateHoverClasses() {
+    dayButtons.forEach(({ btn, date }) => {
+      btn.classList.toggle('is-end-preview', !!(start && !end && hoverDate && date.getTime() === hoverDate.getTime() && date >= start));
+      btn.classList.toggle('is-in-range', inRange(date));
+    });
+  }
+
   function renderAll() {
+    dayButtons = [];
     popover.innerHTML = '';
 
     const nav = document.createElement('div');
@@ -194,6 +213,7 @@ function initPicker(root) {
     months.appendChild(renderMonth(viewMonth));
     months.appendChild(renderMonth(monthTwo));
     popover.appendChild(months);
+    updateHoverClasses();
 
     const footer = document.createElement('div');
     footer.className = 'drp-footer';
