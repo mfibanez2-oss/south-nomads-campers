@@ -47,6 +47,14 @@
       {
         "q": "¿Puedo manejar con seguridad por la Carretera Austral?",
         "a": "<p>Sí.</p><p>Nuestras <strong>camper trucks 4x4</strong> están construidas para los caminos de la Patagonia, tramos de ripio y viajes remotos por el sur de Chile.</p><p>Maneja despacio, disfruta el paisaje, y todo saldrá bien.</p>"
+      },
+      {
+        "q": "¿Hay límite de kilometraje?",
+        "a": "<p><strong>No — el kilometraje es ilimitado</strong>, sin tope diario ni por viaje. Recorre toda la Carretera Austral que quieras.</p>"
+      },
+      {
+        "q": "Si cruzo a Argentina, ¿el permiso cubre varios cruces?",
+        "a": "<p>Sí — el permiso y la documentación que preparamos cubren cruzar hacia y desde Argentina varias veces durante tu ruta.</p><p>Solo necesitamos que nos indiques el rango de fechas en que vas a cruzar, para preparar bien los papeles.</p>"
       }
     ]
   },
@@ -56,6 +64,42 @@
       {
         "q": "¿Qué incluye la camper por dentro?",
         "a": "<p>Cada arriendo incluye lo esencial para un roadtrip por la Patagonia:</p><ul><li>Calefactor a diésel</li><li>Kit de cocina</li><li>Refrigerador</li><li>Sistema solar</li><li>Ropa de cama</li><li>Mesa y sillas de exterior</li></ul><p>Revisa la ficha técnica completa en la página de cada camper: <a href=\"es/campers/nomads-l.html\">Nomads L</a> · <a href=\"es/campers/nomads-m.html\">Nomads M</a>.</p>"
+      },
+      {
+        "q": "¿La camper tiene calefactor?",
+        "a": "<p>Sí — cada camper trae un <strong>calefactor a diésel independiente</strong> del sistema de combustible del vehículo. Es muy efectivo para las noches frías de la Patagonia.</p>"
+      },
+      {
+        "q": "¿Qué hay de la energía solar y la batería?",
+        "a": "<p>Cada camper tiene <strong>panel solar, batería auxiliar e inversor de 220V</strong> — suficiente para varios días off-grid con comodidad.</p>"
+      },
+      {
+        "q": "¿Hay agua caliente o ducha?",
+        "a": "<p>Sí. La ducha portátil tiene su propio calefont a gas (12V, 18.000 BTU), así que tienes agua caliente de verdad incluso en medio de la nada.</p>"
+      },
+      {
+        "q": "¿Cómo es el refrigerador?",
+        "a": "<p>Un <strong>refrigerador Alpicool 22L a compresor</strong> — un compresor de verdad (no una cooler termoeléctrica), así que mantiene la temperatura de forma confiable incluso en días de calor.</p>"
+      },
+      {
+        "q": "¿Qué incluye la cocina?",
+        "a": "<p>Cada camper viene completamente equipada: set completo de ollas y vajilla (ollas, sartenes, platos, cubiertos), lavaplatos de acero inoxidable, estanque de agua fresca, y cocina a gas portátil.</p>"
+      },
+      {
+        "q": "¿Incluye ropa de cama, almohadas y toallas?",
+        "a": "<p>La ropa de cama está incluida, junto con un plumón premium. Las toallas no están incluidas — te recomendamos llevar toallas de microfibra de viaje si vas justo de espacio; se consiguen fácil en Decathlon, incluyendo una sucursal en el mall de Puerto Montt.</p>"
+      },
+      {
+        "q": "¿Qué hay de los neumáticos?",
+        "a": "<p>Neumáticos all-terrain 4 estaciones, más neumático de repuesto y cables para partir — listos para el ripio y la Carretera Austral.</p>"
+      },
+      {
+        "q": "¿Tienen BBQ o parrilla?",
+        "a": "<p>No viene incluida en el equipamiento estándar, pero con gusto podemos agregar una con un costo adicional — solo avísanos al reservar.</p>"
+      },
+      {
+        "q": "¿La camper tiene toldo?",
+        "a": "<p>No, la camper no incluye toldo.</p>"
       },
       {
         "q": "¿Las campers tienen internet?",
@@ -68,7 +112,11 @@
     "items": [
       {
         "q": "¿Cómo funciona el seguro?",
-        "a": "<p>El seguro está incluido en el arriendo.</p><p>El deducible es de aproximadamente <strong>1.000 EUR</strong>.</p><p>Esto aplica principalmente a los daños típicos de los caminos de la Patagonia, como astillados de parabrisas por el ripio.</p>"
+        "a": "<p>El seguro está incluido en el arriendo, con cobertura de responsabilidad civil de <strong>UF 1.000</strong> (aproximadamente €37.000).</p><p>El deducible es de aproximadamente <strong>1.000 EUR</strong>, y aplica principalmente a los daños típicos de los caminos de la Patagonia, como astillados de parabrisas por el ripio.</p>"
+      },
+      {
+        "q": "¿Incluye asistencia en ruta?",
+        "a": "<p>Sí — la asistencia en ruta está incluida durante todo tu arriendo en Chile continental, incluyendo Chiloé.</p>"
       },
       {
         "q": "¿Debo devolver la camper limpia?",

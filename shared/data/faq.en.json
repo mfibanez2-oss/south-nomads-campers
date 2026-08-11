@@ -47,6 +47,14 @@
       {
         "q": "Can I safely drive the Carretera Austral?",
         "a": "<p>Yes.</p><p>Our <strong>4x4 camper trucks</strong> are built for Patagonia roads, gravel sections, and remote travel across southern Chile.</p><p>Drive slowly, enjoy the scenery, and you'll be fine.</p>"
+      },
+      {
+        "q": "Is there a mileage limit?",
+        "a": "<p><strong>No — mileage is unlimited</strong>, with no daily or trip cap. Drive as much of the Carretera Austral as you like.</p>"
+      },
+      {
+        "q": "If I'm crossing into Argentina, does the permit cover multiple crossings?",
+        "a": "<p>Yes — the permit and documentation we prepare cover crossing in and out of Argentina multiple times during your route.</p><p>Just let us know the date range during which you'll be crossing so we can prepare the paperwork correctly.</p>"
       }
     ]
   },
@@ -56,6 +64,42 @@
       {
         "q": "What is included inside the camper?",
         "a": "<p>Every camper includes the essentials for a Patagonia roadtrip:</p><ul><li>Diesel heater</li><li>Kitchen kit</li><li>Fridge</li><li>Solar setup</li><li>Bedding</li><li>Outdoor table and chairs</li></ul><p>See the full spec sheet on each camper's page: <a href=\"en/campers/nomads-l.html\">Nomads L</a> · <a href=\"en/campers/nomads-m.html\">Nomads M</a>.</p>"
+      },
+      {
+        "q": "Does the camper have a heater?",
+        "a": "<p>Yes — every camper comes with an <strong>off-grid diesel heater</strong>, independent from the vehicle's fuel system. It's very effective for cold Patagonian nights.</p>"
+      },
+      {
+        "q": "What about solar power and batteries?",
+        "a": "<p>Each camper has a <strong>solar panel, auxiliary battery, and 220V inverter</strong> — enough to keep you comfortably off-grid for several days.</p>"
+      },
+      {
+        "q": "Is there hot water or a shower?",
+        "a": "<p>Yes. The portable shower has its own gas-powered water heater (12V, 18,000 BTU), so you get real hot water even out in the middle of nowhere.</p>"
+      },
+      {
+        "q": "What's the fridge like?",
+        "a": "<p>An <strong>Alpicool 22L compressor fridge</strong> — a proper compressor unit (not a thermoelectric cooler), so it holds temperature reliably even on warm days.</p>"
+      },
+      {
+        "q": "What's included in the kitchen?",
+        "a": "<p>Every camper comes fully equipped: a full cookware and dinnerware set (pots, pans, plates, cutlery), a stainless steel sink, a fresh water tank, and a portable gas stove.</p>"
+      },
+      {
+        "q": "Are bedding, pillows, and towels included?",
+        "a": "<p>Bedding and linens are included, along with a premium down duvet. Towels are not included — we recommend packing microfibre travel towels if you're tight on space; they're easy to find at Decathlon, including a branch in the Puerto Montt mall.</p>"
+      },
+      {
+        "q": "What about tires?",
+        "a": "<p>4-season all-terrain tires, plus a spare tire and jump cables — ready for gravel and the Carretera Austral.</p>"
+      },
+      {
+        "q": "Do you have a BBQ or grill?",
+        "a": "<p>Not included as standard equipment, but we're happy to add one for an extra fee — just let us know when booking.</p>"
+      },
+      {
+        "q": "Does the camper have an awning?",
+        "a": "<p>No, the camper doesn't include an awning.</p>"
       },
       {
         "q": "Do the campers have internet?",
@@ -68,7 +112,11 @@
     "items": [
       {
         "q": "How does insurance work?",
-        "a": "<p>Insurance is included in the rental.</p><p>The deductible is approximately <strong>1,000 EUR</strong>.</p><p>This mainly applies to common Patagonia road damage like windshield chips from gravel roads.</p>"
+        "a": "<p>Insurance is included in the rental, with third-party liability coverage of <strong>UF 1,000</strong> (roughly €37,000).</p><p>The deductible is approximately <strong>1,000 EUR</strong>, which mainly applies to common Patagonia road damage like windshield chips from gravel roads.</p>"
+      },
+      {
+        "q": "Is roadside assistance included?",
+        "a": "<p>Yes — roadside assistance is included for the duration of your rental across continental Chile, including Chiloé.</p>"
       },
       {
         "q": "Do I need to return the camper clean?",
