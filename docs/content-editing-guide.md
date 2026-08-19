@@ -41,6 +41,48 @@ Edit `shared/data/faq.en.json` and `shared/data/faq.es.json`. Each entry is `{ "
 ## Add a photo
 Drop the image into the matching folder under `shared/img/` (`nomads-l/`, `nomads-m/`, `lifestyle/`, `patagonia/`) and reference it with an `<img src="/shared/img/...">` tag on the page you want it on.
 
+## Add or edit a blog post
+
+The blog lives at `en/blog/` and `es/blog/`. Each post is its own folder with a single
+`index.html` (e.g. `es/blog/arrendar-camper-en-chile/index.html`). There is no CMS and no
+build step - the HTML **is** the post.
+
+**To edit an existing post:** open its `index.html` and edit the text inside
+`<div class="post-body">`. Everything else (header, footer, author box, CTA) is boilerplate
+copied from the other pages.
+
+**To add a new post**, copy the folder of an existing post and change, in order:
+
+1. **Folder name** - it is the URL, so make it a keyword phrase in that language
+   (`es/blog/mi-nuevo-tema/`). The English and Spanish versions have *different* slugs on
+   purpose, translated for search.
+2. `<title>`, `<meta name="description">` (aim for 150-160 characters), `<meta name="keywords">`,
+   and the `og:`/`twitter:` copies of the title and description.
+3. `<link rel="canonical">` and the two `<link rel="alternate" hreflang=...>` tags - these must
+   point at the new EN and ES URLs. **The EN/ES language switch reads those hreflang tags**
+   (`shared/js/lang-toggle.js`), so if they are wrong the switch sends readers to the wrong page.
+4. The JSON-LD block at the end of `<head>`: `headline`, `description`, `image`, `datePublished`,
+   `dateModified`, the breadcrumb `name`/`item`, and the FAQ questions and answers. Keep the FAQ
+   entries in the JSON-LD identical to the visible `<details>` block at the bottom of the page -
+   Google penalises mismatches.
+5. The visible content: `<h1>`, the standfirst, the table of contents (`.post-toc` links must match
+   the `id` of each `<h2>`), the body, and the FAQ `<details>` items.
+6. **Add the post to both blog index pages** (`en/blog/index.html`, `es/blog/index.html`) by copying
+   an existing `<article class="card post-card">` block. The `data-cat` attribute must be one of
+   `planificar`, `rutas`, `camper` - it drives the category filter chips.
+7. **Add both URLs to `sitemap.xml`** with a `<lastmod>` date.
+8. Link to the new post from two or three existing posts, and link out from it to the money pages
+   (campers, itineraries, contact). Internal links are most of what makes a new post rank.
+
+Blog-only styling lives in `shared/css/pages/blog.css` (callouts, tables, the author box, the FAQ
+accordion). Useful blocks you can copy inside `post-body`:
+`<div class="callout">`, `<div class="callout warn">`, `<div class="post-cta">`, and
+`<div class="table-scroll"><table>...</table></div>` (the wrapper is what stops wide tables from
+breaking the page on a phone).
+
+Photos come from `shared/img/` like everywhere else. The author photo is
+`shared/img/lifestyle/rodrigo-avatar.jpg`, cropped from `Rodrigo.png`.
+
 ## Known open items (flagged during the build)
 - **Custom domain**: the site is not yet pointed at `southnomadscampers.com`. That needs a `CNAME` file in this repo plus a DNS change with your domain provider — done as a deliberate follow-up once the `github.io` URL is verified working.
 - **More Google review links**: only 4 reviews have a personal Google Maps deep link so far (Leonie, Josse, Rhys, Andreas). If you can grab more from your Google Business Profile's "reviews" tab (look for a share icon on each review), add them to the JSON files above.
