@@ -1,3 +1,20 @@
 .DS_Store
 Thumbs.db
 .claude/
+
+# --- Privacidad: este repositorio es PUBLICO -------------------------------
+# Material personal en bruto que vive en shared/img/lifestyle/ y nunca debe
+# publicarse por accidente con un "git add -A". Las fotos que SI se usan en el
+# sitio estan trackeadas explicitamente; estas no.
+*.mov
+*.MOV
+*.mp4
+*.heic
+*.HEIC
+shared/img/lifestyle/WhatsApp*
+shared/img/lifestyle/IMG-*
+shared/img/lifestyle/IMG_*
+shared/img/lifestyle/Rodrigo.png
+shared/img/lifestyle/Comedor*
+shared/img/lifestyle/Interior*
+shared/img/lifestyle/_originales/
