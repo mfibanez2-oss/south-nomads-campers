@@ -64,6 +64,10 @@ function initContactForm(el) {
   const pickupDateInput = el.querySelector('[data-role="pickup-date"]');
   const dropoffDateInput = el.querySelector('[data-role="dropoff-date"]');
   const messageInput = el.querySelector('[data-role="message"]');
+  // Honeypot: a decoy input positioned off-screen. Real visitors never see or fill it,
+  // so any value means an automated submission - dropped without hitting the Worker and
+  // without navigating to thank-you.html (which is what fires the Google Ads conversion).
+  const honeypot = el.querySelector('[data-role="company"]');
   const statusEl = el.querySelector('[data-role="form-status"]');
   const sendBtn = el.querySelector('[data-role="send-contact"]');
 
@@ -75,6 +79,7 @@ function initContactForm(el) {
   });
 
   sendBtn.addEventListener('click', async () => {
+    if (honeypot && honeypot.value) return;
     const name = nameInput.value.trim();
     const email = emailInput.value.trim();
     const phone = phoneInput.value.trim();

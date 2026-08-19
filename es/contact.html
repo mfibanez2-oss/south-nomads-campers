@@ -52,6 +52,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <a href="es/destinations/index.html">Destinos</a>
       <a href="es/hubs/index.html">Puntos de Retiro</a>
       <a href="es/itinerarios/">Itinerarios</a>
+      <a href="es/blog/">Blog</a>
       <a href="es/faq/index.html">FAQs</a>
       <a href="es/about/index.html">Sobre Nosotros</a>
     </nav>
@@ -92,6 +93,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <p class="lead">Completa esto y llega directo a la bandeja de Josefina y Rodrigo.</p>
     </div>
     <div class="contact-form quote-form" data-lang="es" style="max-width:520px; margin:0 auto;">
+      <!-- Anti-spam: campo señuelo, invisible para personas. Los bots lo llenan; si viene
+           con texto, el formulario se descarta en silencio (ver shared/js/contact-form.js). -->
+      <div class="hp-field" aria-hidden="true" style="position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;">
+        <label>No completar</label>
+        <input type="text" data-role="company" tabindex="-1" autocomplete="off">
+      </div>
       <div class="calc-field">
         <label>Nombre completo</label>
         <input type="text" data-role="name">
@@ -182,6 +189,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <li><a href="es/campers/nomads-m/">Nomads M</a></li>
           <li><a href="es/destinations/index.html">Destinos</a></li>
           <li><a href="es/itinerarios/">Itinerarios</a></li>
+          <li><a href="es/blog/">Blog</a></li>
         </ul>
       </div>
       <div>
