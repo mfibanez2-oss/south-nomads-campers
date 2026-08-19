@@ -11,7 +11,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img { max-width: 100%; display: block; }
+/* height:auto keeps the aspect ratio when a width/height attribute is on the tag —
+   without it, an <img width="1200" height="800"> stretches to 800px tall whatever
+   the real photo is. Rules that set an explicit height (.card-img img, avatars,
+   .brand img) are more specific and still win. */
+img { max-width: 100%; height: auto; display: block; }
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
