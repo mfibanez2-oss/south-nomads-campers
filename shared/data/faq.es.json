@@ -112,11 +112,15 @@
     "items": [
       {
         "q": "¿Cómo funciona el seguro?",
-        "a": "<p>El seguro está incluido en el arriendo, con cobertura de responsabilidad civil de <strong>UF 1.000</strong> (aproximadamente €37.000).</p><p>El deducible es de aproximadamente <strong>1.000 EUR</strong>, y aplica principalmente a los daños típicos de los caminos de la Patagonia, como astillados de parabrisas por el ripio.</p>"
+        "a": "<p>El seguro ya está incluido en tu arriendo — no hay nada extra que pagar por él. Tiene dos partes:</p><ul><li><strong>SOAP</strong> — cobertura obligatoria en Chile, que incluye asistencia en ruta dentro de Chile.</li><li><strong>CDW (Collision Damage Waiver)</strong> — cubre reparaciones del vehículo si le pasa algo a la camper.</li></ul><p>El deducible es de aproximadamente <strong>€1.000</strong> (≈ CLP 1.057.000), y la cobertura de responsabilidad civil frente a terceros es de <strong>UF 1.000</strong>.</p><p>Siempre recomendamos que además contrates tu propio seguro de viaje, por si necesitas cubrir gastos médicos durante el viaje — nosotros no lo vendemos ni lo gestionamos, es solo una recomendación.</p>"
+      },
+      {
+        "q": "¿Qué cubre exactamente el seguro?",
+        "a": "<p>Es una cobertura de daños materiales completa, no solo de responsabilidad civil — así que la camper está cubierta incluso en un accidente de un solo vehículo, sin otro auto involucrado. En concreto:</p><p><strong>Cubierto:</strong></p><ul><li>Parabrisas y vidrios</li><li>Volcamientos</li><li>Accidentes de un solo vehículo</li><li>Daños en la parte baja del vehículo, siempre que estés en un camino público (el ripio y la tierra cuentan — eso es la mayor parte de la Carretera Austral)</li></ul><p><strong>No cubierto:</strong></p><ul><li>Neumáticos y ruedas por sí solos — un pinchazo o reventón aislado no está cubierto, solo si el daño ocurre como parte de un accidente mayor que también afecta al resto del vehículo</li><li>Salir de caminos habilitados (cruces de río, arena, terreno no apto para vehículos)</li></ul><p>Una distinción importante: este seguro cubre el <strong>camión</strong>, no la estructura de la camper en sí. Para eso está tu depósito de garantía — si la estructura de la camper resulta dañada, se cubre con el depósito en vez de solo el deducible.</p>"
       },
       {
         "q": "¿Incluye asistencia en ruta?",
-        "a": "<p>Sí — la asistencia en ruta está incluida durante todo tu arriendo en Chile continental, incluyendo Chiloé.</p>"
+        "a": "<p>Sí — la asistencia en ruta está incluida (como parte del SOAP obligatorio) durante todo tu arriendo en Chile continental, incluyendo Chiloé.</p>"
       },
       {
         "q": "¿Debo devolver la camper limpia?",

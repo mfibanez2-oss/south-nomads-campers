@@ -112,11 +112,15 @@
     "items": [
       {
         "q": "How does insurance work?",
-        "a": "<p>Insurance is included in the rental, with third-party liability coverage of <strong>UF 1,000</strong> (roughly €37,000).</p><p>The deductible is approximately <strong>1,000 EUR</strong>, which mainly applies to common Patagonia road damage like windshield chips from gravel roads.</p>"
+        "a": "<p>Insurance is already included in your rental — there's nothing extra to pay for it. It has two parts:</p><ul><li><strong>SOAP</strong> — mandatory Chilean coverage, which includes roadside assistance within Chile.</li><li><strong>CDW (Collision Damage Waiver)</strong> — covers repairs to the vehicle if something happens to the camper.</li></ul><p>The deductible is approximately <strong>€1,000</strong> (≈ CLP 1,057,000), and third-party liability coverage is <strong>UF 1,000</strong>.</p><p>We always recommend travelers also get their own travel insurance, in case you need to cover medical expenses during the trip — we don't sell or arrange that ourselves, just a friendly heads up.</p>"
+      },
+      {
+        "q": "What does the insurance actually cover?",
+        "a": "<p>It's comprehensive coverage, not just liability — so the camper is covered even in a single-vehicle accident with no other car involved. Specifically:</p><p><strong>Covered:</strong></p><ul><li>Windshield and glass</li><li>Rollovers</li><li>Single-vehicle accidents</li><li>Underbody damage, as long as you're on a public road (gravel and dirt count — that's most of the Carretera Austral)</li></ul><p><strong>Not covered:</strong></p><ul><li>Tires and wheels on their own — a standalone flat or blowout isn't covered, only tire damage that happens as part of a bigger accident affecting the rest of the vehicle</li><li>Driving off designated roads (river crossings, sand, terrain not meant for vehicles)</li></ul><p>One important distinction: this insurance covers the <strong>truck</strong>, not the camper body itself. That's what your security deposit is for — if the camper body is damaged, the deposit covers it instead of just the smaller deductible.</p>"
       },
       {
         "q": "Is roadside assistance included?",
-        "a": "<p>Yes — roadside assistance is included for the duration of your rental across continental Chile, including Chiloé.</p>"
+        "a": "<p>Yes — roadside assistance is included (as part of the mandatory SOAP coverage) for the duration of your rental across continental Chile, including Chiloé.</p>"
       },
       {
         "q": "Do I need to return the camper clean?",
