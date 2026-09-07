@@ -83,6 +83,16 @@ breaking the page on a phone).
 Photos come from `shared/img/` like everywhere else. The author photo is
 `shared/img/lifestyle/rodrigo-avatar.jpg`, cropped from `Rodrigo.png`.
 
+## URLs: always link to the folder, never to index.html
+
+Every page that lives in a folder is served at two addresses - `/es/faq/` and
+`/es/faq/index.html` both work. The site standardises on the first one: links, canonical
+tags, hreflang and the sitemap all use the folder form, so Google only ever sees one URL
+per page. When you add a link by hand, write `href="es/faq/"`, not `href="es/faq/index.html"`.
+
+Pages that are a single file rather than a folder (`contact.html`, `reviews.html`) keep
+their `.html` ending - there is only one address for them, so there is nothing to unify.
+
 ## Known open items (flagged during the build)
 - **Custom domain**: the site is not yet pointed at `southnomadscampers.com`. That needs a `CNAME` file in this repo plus a DNS change with your domain provider — done as a deliberate follow-up once the `github.io` URL is verified working.
 - **More Google review links**: only 4 reviews have a personal Google Maps deep link so far (Leonie, Josse, Rhys, Andreas). If you can grab more from your Google Business Profile's "reviews" tab (look for a share icon on each review), add them to the JSON files above.

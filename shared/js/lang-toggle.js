@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 2. "itineraries" doesn't translate to the same word.
   if (path.includes('en/itineraries/') || path.includes('es/itinerarios/')) {
-    if (enLink) enLink.href = 'en/itineraries/index.html';
+    if (enLink) enLink.href = 'en/itineraries/';
     if (esLink) esLink.href = 'es/itinerarios/';
     return;
   }
