@@ -1,6 +1,6 @@
 {
   "currency": "CLP",
-  "rate_note": "V5 pricing, confirmed 2026-09. Offer-based, not cost-based. Nomads L High season anchored ~2% below the cheapest real competitor (180Sur Scout ~$230k) — narrower discount than before, reflecting 11 completed bookings and customer feedback citing trust/communication/speed over price as the reason they booked. Mid/Low season base (under_threshold) rates unchanged from V4. Nomads M always derived as a fixed 88% of Nomads L, to guarantee L > M always. 15+ day rate is retroactive to the whole stay, at a flat 5% discount off the under-threshold rate in every season (was 9.6-12.7%, varying by season) — tightened so that a <=14-day total rental cost is always lower than a 15+-day total, with margin (14 x under_threshold < 15 x over_threshold in all 6 cells). Fixed, not live-converted, so they match whatever gets configured as SumUp per-day products.",
+  "rate_note": "V6 pricing, confirmed 2026-09-12. Offer-based, not cost-based. High and Mid season margins below the real competitor floor narrowed further (High: Nomads L ~0.9% below 180Sur Scout ~$230k, was ~2%; Mid: ~2.6% below Camperworld X-Wing ~$190k, its first tightening since V4), reflecting sustained booking demand. Low season untouched this round. Nomads M always derived as a fixed 88% of Nomads L, to guarantee L > M always. 15+ day rate stays a flat 5% discount off the under-threshold rate, retroactive to the whole stay, keeping 14 x under_threshold < 15 x over_threshold in all 6 cells with margin. Fixed, not live-converted, so they match whatever gets configured as SumUp per-day products.",
   "deposit_percent": 0.5,
   "long_trip_threshold_days": 15,
   "sumup_general_link": "https://pay.sumup.com/b2c/Q0Z2DE77",
@@ -16,8 +16,8 @@
       "tagline_es": "Patagonia Comfort — hasta 4 personas",
       "sumup_link": "https://pay.sumup.com/b2c/Q6CUILY0",
       "rates": {
-        "high": { "under_threshold_clp_per_day": 225000, "over_threshold_clp_per_day": 214000, "sumup_product_under_threshold": "", "sumup_product_over_threshold": "" },
-        "mid":  { "under_threshold_clp_per_day": 180000, "over_threshold_clp_per_day": 171000, "sumup_product_under_threshold": "", "sumup_product_over_threshold": "" },
+        "high": { "under_threshold_clp_per_day": 228000, "over_threshold_clp_per_day": 217000, "sumup_product_under_threshold": "", "sumup_product_over_threshold": "" },
+        "mid":  { "under_threshold_clp_per_day": 185000, "over_threshold_clp_per_day": 176000, "sumup_product_under_threshold": "", "sumup_product_over_threshold": "" },
         "low":  { "under_threshold_clp_per_day": 152000, "over_threshold_clp_per_day": 144000, "sumup_product_under_threshold": "", "sumup_product_over_threshold": "" }
       }
     },
@@ -27,8 +27,8 @@
       "tagline_es": "Para 2 viajeros",
       "sumup_link": "https://pay.sumup.com/b2c/QKAADWJO",
       "rates": {
-        "high": { "under_threshold_clp_per_day": 198000, "over_threshold_clp_per_day": 188000, "sumup_product_under_threshold": "", "sumup_product_over_threshold": "" },
-        "mid":  { "under_threshold_clp_per_day": 158000, "over_threshold_clp_per_day": 150000, "sumup_product_under_threshold": "", "sumup_product_over_threshold": "" },
+        "high": { "under_threshold_clp_per_day": 201000, "over_threshold_clp_per_day": 191000, "sumup_product_under_threshold": "", "sumup_product_over_threshold": "" },
+        "mid":  { "under_threshold_clp_per_day": 163000, "over_threshold_clp_per_day": 155000, "sumup_product_under_threshold": "", "sumup_product_over_threshold": "" },
         "low":  { "under_threshold_clp_per_day": 134000, "over_threshold_clp_per_day": 127000, "sumup_product_under_threshold": "", "sumup_product_over_threshold": "" }
       }
     }
