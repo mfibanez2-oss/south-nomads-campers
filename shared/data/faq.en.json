@@ -4,7 +4,7 @@
     "items": [
       {
         "q": "How does the booking process work?",
-        "a": "<p>Booking is simple.</p><ol><li>Choose your camper and travel dates</li><li>We send you a personalized quote</li><li>Confirm with a <strong>50% deposit</strong></li></ol><p>The remaining balance is paid before pickup.</p>"
+        "a": "<p>Booking works in three steps:</p><ol><li>Choose your camper and travel dates, we send you a personalized quote.</li><li>Confirm with a <strong>50% deposit</strong> — this is what locks in your dates.</li><li>Pay the remaining balance at least <strong>7 days before pickup</strong>, by bank transfer or credit card (3% processing fee applies).</li></ol><p>On pickup day, you'll also leave a refundable security deposit ($1,500,000 CLP, or $2,000,000 CLP for trips crossing into Argentina).</p>"
       },
       {
         "q": "Do you offer discounts for long-term rentals?",
