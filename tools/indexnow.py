@@ -27,8 +27,7 @@ ENDPOINT = "https://api.indexnow.org/indexnow"
 def sitemap_urls(filter_text=None):
     xml = io.open("sitemap.xml", encoding="utf-8").read()
     urls = re.findall(r"<loc>([^<]+)</loc>", xml)
-    # el sitemap usa el dominio sin www; IndexNow exige que coincida con el host
-    urls = [u  # el sitemap ya declara el host con www for u in urls]
+    # el sitemap ya declara el host con www, que es el que exige IndexNow
     if filter_text:
         urls = [u for u in urls if filter_text in u]
     return urls
