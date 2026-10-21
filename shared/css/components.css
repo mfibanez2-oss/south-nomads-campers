@@ -589,3 +589,7 @@
   .drp-months { gap: var(--space-2); }
   .drp-month { width: 44vw; min-width: 220px; }
 }
+
+/* Header link that points at the Deals page; stands out from the other nav links. */
+.nav-links a.nav-link-deals { color: var(--color-ember-dark); }
+.nav-links a.nav-link-deals:hover { color: var(--color-ember); }
