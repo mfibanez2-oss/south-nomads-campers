@@ -13,10 +13,13 @@ const DEALS_UI = {
   en: {
     save: 'You save',
     days: 'days',
-    colDates: 'Dates',
-    colDays: 'Days',
-    colNormal: 'Regular price',
-    colDeal: 'Deal',
+    total: (n) => `total for ${n} days`,
+    pickup: 'Pick-up',
+    dropoff: 'Drop-off',
+    startDay: 'Start day',
+    endDay: 'End day',
+    chooseDates: 'Choose your dates',
+    more: 'More details',
     booked: 'Booked',
     soldOut: 'Sold out',
     spots: (n) => `${n} ${n === 1 ? 'spot' : 'spots'}`,
@@ -26,14 +29,18 @@ const DEALS_UI = {
     waIntro: 'Hi South Nomads Campers! I want this Deal:',
     waOutro: 'Is it still available?',
     year: (label) => `${label}, 2026`,
+    locale: 'en-US',
   },
   es: {
     save: 'Ahorro',
     days: 'días',
-    colDates: 'Fechas',
-    colDays: 'Días',
-    colNormal: 'Precio normal',
-    colDeal: 'Deal',
+    total: (n) => `total por ${n} días`,
+    pickup: 'Retiro',
+    dropoff: 'Entrega',
+    startDay: 'Día de inicio',
+    endDay: 'Día de término',
+    chooseDates: 'Elige tus fechas',
+    more: 'Ver más detalles',
     booked: 'Reservado',
     soldOut: 'Agotado',
     spots: (n) => `${n} ${n === 1 ? 'cupo' : 'cupos'}`,
@@ -43,6 +50,7 @@ const DEALS_UI = {
     waIntro: 'Hola South Nomads Campers! Quiero este Deal:',
     waOutro: '¿Sigue disponible?',
     year: (label) => `${label} de 2026`,
+    locale: 'es-CL',
   },
 };
 
@@ -50,6 +58,13 @@ const DEALS_UI = {
 // visitors in other time zones.
 function todayInChile() {
   return new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Santiago' }).format(new Date());
+}
+
+// "2026-11-16" -> "Mon, Nov 16, 2026" / "lun, 16 nov 2026"
+function fmtDay(ui, iso) {
+  return new Intl.DateTimeFormat(ui.locale, {
+    weekday: 'short', day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC',
+  }).format(new Date(`${iso}T00:00:00Z`));
 }
 
 function waLink(number, text) {
@@ -80,6 +95,9 @@ function renderDeal(deal, lang, number, today) {
 
   const soldCount = options ? options.filter((o) => o.status === 'sold').length : 0;
   const soldOut = options ? soldCount === options.length : deal.status === 'sold';
+  const first = options ? options.find((o) => o.status !== 'sold') : null;
+  // The dates shown in the summary rows: the deal's own, or the selected option's.
+  const shown = options ? (first || options[0]) : deal;
 
   let tag = t.tag;
   if (options && deal.spots_total && !soldOut) {
@@ -88,42 +106,52 @@ function renderDeal(deal, lang, number, today) {
   }
 
   let priceBlock = '';
-  let facts = '';
-  let optionsBlock = '';
-  const first = options ? options.find((o) => o.status !== 'sold') : null;
   if (options) {
-    optionsBlock = `
-      <table class="deal-options">
-        <thead><tr>
-          <th scope="col">${ui.colDates}</th><th scope="col">${ui.colDays}</th>
-          <th scope="col">${ui.colNormal}</th><th scope="col">${ui.colDeal}</th>
-        </tr></thead>
-        <tbody>
-          ${options.map((o) => {
-            const sold = o.status === 'sold';
-            const inputId = `${deal.id}-${o.id}`;
-            const saving = o.normal_clp - o.deal_clp;
-            const rowClass = (sold ? 'is-sold' : '') + (o === first ? ' is-selected' : '');
-            const datesCell = sold
-              ? `<span class="opt-label"><span class="deal-booked">${ui.booked}</span> ${o.t.dates}</span>`
-              : `<label class="opt-label" for="${inputId}"><input type="radio" id="${inputId}" name="${deal.id}" value="${o.id}"${o === first ? ' checked' : ''}> ${o.t.dates}</label>`;
+    priceBlock = `
+      <p class="deal-choose">${ui.chooseDates}</p>
+      <div class="deal-options" role="radiogroup">
+        ${options.map((o) => {
+          const sold = o.status === 'sold';
+          const inputId = `${deal.id}-${o.id}`;
+          const saving = o.normal_clp - o.deal_clp;
+          const prices = `
+            <span class="opt-prices">
+              <s>${ui.money(o.normal_clp)}</s>
+              <strong>${ui.money(o.deal_clp)}</strong>
+            </span>`;
+          if (sold) {
             return `
-          <tr class="${rowClass.trim()}">
-            <td class="opt-dates">${datesCell}</td>
-            <td class="opt-days">${o.days} ${ui.days}</td>
-            <td class="opt-normal" data-label="${ui.colNormal}"><s>${ui.money(o.normal_clp)}</s></td>
-            <td class="opt-deal"><strong>${ui.money(o.deal_clp)}</strong><small>${ui.save} ${ui.money(saving)}</small></td>
-          </tr>`;
-          }).join('')}
-        </tbody>
-      </table>`;
+        <div class="deal-option is-sold">
+          <span class="opt-main"><span class="deal-booked">${ui.booked}</span><span class="opt-dates">${o.t.dates}</span><span class="opt-days">${o.days} ${ui.days}</span></span>
+          ${prices}
+        </div>`;
+          }
+          return `
+        <label class="deal-option${o === first ? ' is-selected' : ''}" for="${inputId}">
+          <input type="radio" id="${inputId}" name="${deal.id}" value="${o.id}"${o === first ? ' checked' : ''}>
+          <span class="opt-main"><span class="opt-dates">${o.t.dates}</span><span class="opt-days">${o.days} ${ui.days}</span></span>
+          ${prices}
+          <small class="opt-save">${ui.save} ${ui.money(saving)}</small>
+        </label>`;
+        }).join('')}
+      </div>`;
   } else {
     const saving = deal.normal_clp - deal.deal_clp;
-    facts = `<p>${t.dates} · ${deal.days} ${ui.days}</p>`;
     priceBlock = `
-      <div class="deal-price"><span class="normal">${ui.money(deal.normal_clp)}</span><span class="now">${ui.money(deal.deal_clp)}</span></div>
-      <div class="deal-saving">${ui.save}: ${ui.money(saving)}${t.saving_note ? ` · ${t.saving_note}` : ''}</div>`;
+      <div class="deal-price">
+        <span class="normal">${ui.money(deal.normal_clp)}</span>
+        <span class="now">${ui.money(deal.deal_clp)}</span>
+      </div>
+      <p class="deal-total">${ui.total(deal.days)} · ${ui.save.toLowerCase()} ${ui.money(saving)}${t.saving_note ? ` · ${t.saving_note}` : ''}</p>`;
   }
+
+  const rows = `
+      <dl class="deal-rows">
+        <div><dt>${ui.pickup}</dt><dd>${t.pickup}</dd></div>
+        <div><dt>${ui.dropoff}</dt><dd>${t.dropoff}</dd></div>
+        <div><dt>${ui.startDay}</dt><dd data-start>${fmtDay(ui, shown.pickup_date)}</dd></div>
+        <div><dt>${ui.endDay}</dt><dd data-end>${fmtDay(ui, shown.dropoff_date)}</dd></div>
+      </dl>`;
 
   const button = soldOut
     ? `<span class="btn btn-primary is-disabled" aria-disabled="true">${ui.soldOut}</span>`
@@ -132,18 +160,21 @@ function renderDeal(deal, lang, number, today) {
   return `
     <article class="deal-card${soldOut ? ' is-soldout' : ''}" id="deal-${deal.id}" data-deal="${deal.id}">
       <div class="deal-media">
+        <span class="deal-tag">${tag}</span>
         ${soldOut ? `<span class="deal-soldout-label">${ui.soldOut}</span>` : ''}
         <img src="${deal.image}" alt="" loading="lazy">
       </div>
       <div class="deal-body">
-        <div class="deal-tag-row"><span class="deal-tag">${tag}</span></div>
         <h3>${t.title}</h3>
         <p class="deal-camper">${t.camper}</p>
-        <div class="deal-facts">${facts}<p class="deal-route">${t.route}</p></div>
         ${priceBlock}
-        ${optionsBlock}
-        <p class="deal-text">${t.text}</p>
-        ${t.note ? `<p class="deal-note">${t.note}</p>` : ''}
+        ${rows}
+        <details class="deal-more">
+          <summary>${ui.more}</summary>
+          <p class="deal-route">${t.route}</p>
+          <p class="deal-text">${t.text}</p>
+          ${t.note ? `<p class="deal-note">${t.note}</p>` : ''}
+        </details>
         <div class="deal-cta">${button}</div>
       </div>
     </article>`;
@@ -176,9 +207,12 @@ async function initDeals(el) {
     };
     card.querySelectorAll('input[type="radio"]').forEach((radio) => {
       radio.addEventListener('change', () => {
-        card.querySelectorAll('tr.is-selected').forEach((tr) => tr.classList.remove('is-selected'));
-        radio.closest('tr').classList.add('is-selected');
-        cta.href = waLink(data.whatsapp_number, dealMessage(ui, t, deal, currentOption()));
+        const opt = currentOption();
+        card.querySelectorAll('.deal-option.is-selected').forEach((x) => x.classList.remove('is-selected'));
+        radio.closest('.deal-option').classList.add('is-selected');
+        card.querySelector('[data-start]').textContent = fmtDay(ui, opt.pickup_date);
+        card.querySelector('[data-end]').textContent = fmtDay(ui, opt.dropoff_date);
+        cta.href = waLink(data.whatsapp_number, dealMessage(ui, t, deal, opt));
       });
     });
     // GTM already reports whatsapp_click for any wa.me link click (the deal id travels inside

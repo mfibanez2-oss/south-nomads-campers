@@ -4,39 +4,6 @@
   "whatsapp_number": "56923761438",
   "deals": [
     {
-      "id": "m-coyhaique-pv-oct29",
-      "status": "available",
-      "camper": "nomads-m",
-      "pickup_date": "2026-10-29",
-      "dropoff_date": "2026-11-05",
-      "days": 8,
-      "normal_clp": 2289000,
-      "deal_clp": 1550000,
-      "image": "shared/img/lifestyle/camper-4x4-lago-montanas.jpg",
-      "en": {
-        "tag": "Relocation Deal",
-        "title": "The Carretera Austral, south to north",
-        "camper": "Nomads M · 4x4 · sleeps 2 · unlimited mileage",
-        "dates": "October 29 to November 5, 2026",
-        "route": "Pick up in Coyhaique, drop off in Puerto Varas",
-        "saving_note": "Coyhaique pickup fee waived",
-        "text": "Our Nomads M finishes a trip in Coyhaique and needs to get back to Puerto Varas. Drive it home for us: Queulat National Park and its Hanging Glacier, the Puyuhuapi hot springs, Chaitén and Pumalín Park, along the most beautiful stretch of the Carretera Austral. The Coyhaique pickup fee is on us.",
-        "note": "The route includes the northern ferry crossings (Caleta Gonzalo to Hornopirén, Caleta Puelche to La Arena). Ferries are paid by you and we'll help you book them: do it as soon as you confirm.",
-        "wa_what": "Nomads M, pick up in Coyhaique, drop off in Puerto Varas"
-      },
-      "es": {
-        "tag": "Deal de reposicionamiento",
-        "title": "Carretera Austral de sur a norte",
-        "camper": "Nomads M · 4x4 · 2 personas · kilometraje ilimitado",
-        "dates": "29 de octubre al 5 de noviembre de 2026",
-        "route": "Retiro en Coyhaique, entrega en Puerto Varas",
-        "saving_note": "sin cargo de retiro en Coyhaique",
-        "text": "Nuestra Nomads M termina un viaje en Coyhaique y tiene que volver a Puerto Varas. Haz tú ese camino: el Parque Nacional Queulat y su Ventisquero Colgante, las termas de Puyuhuapi, Chaitén y el Parque Pumalín, todo por el tramo más bonito de la Carretera Austral. No cobramos el cargo de retiro en Coyhaique.",
-        "note": "Incluye los cruces en transbordador del tramo norte (Caleta Gonzalo a Hornopirén y Caleta Puelche a La Arena). Tú los pagas y te ayudamos a reservarlos: hazlo apenas confirmes.",
-        "wa_what": "Nomads M, retiro en Coyhaique y entrega en Puerto Varas"
-      }
-    },
-    {
       "id": "l-pv-nov16",
       "status": "available",
       "camper": "nomads-l",
@@ -53,7 +20,9 @@
         "dates": "November 16 to 23, 2026",
         "route": "Round trip from Puerto Varas",
         "text": "Eight days in northern Patagonia in the roomiest camper of our fleet: the volcanoes and lakes of Los Lagos, Hornopirén, Chaitén and Pumalín Park. Perfect for a family or two couples.",
-        "wa_what": "Nomads L, round trip from Puerto Varas"
+        "wa_what": "Nomads L, round trip from Puerto Varas",
+        "pickup": "Puerto Varas",
+        "dropoff": "Puerto Varas"
       },
       "es": {
         "tag": "Fechas liberadas",
@@ -62,7 +31,9 @@
         "dates": "16 al 23 de noviembre de 2026",
         "route": "Retiro y entrega en Puerto Varas",
         "text": "Ocho días para recorrer la Patagonia norte con la camper más amplia de la flota: volcanes y lagos de Los Lagos, Hornopirén, Chaitén y el Parque Pumalín. Ideal para una familia o dos parejas.",
-        "wa_what": "Nomads L, retiro y entrega en Puerto Varas"
+        "wa_what": "Nomads L, retiro y entrega en Puerto Varas",
+        "pickup": "Puerto Varas",
+        "dropoff": "Puerto Varas"
       }
     },
     {
@@ -80,8 +51,12 @@
           "days": 20,
           "normal_clp": 4180000,
           "deal_clp": 3780000,
-          "en": { "dates": "Nov 21 to Dec 10" },
-          "es": { "dates": "21 nov al 10 dic" }
+          "en": {
+            "dates": "Nov 21 to Dec 10"
+          },
+          "es": {
+            "dates": "21 nov al 10 dic"
+          }
         },
         {
           "id": "nov23-dec10",
@@ -91,8 +66,12 @@
           "days": 18,
           "normal_clp": 3762000,
           "deal_clp": 3402000,
-          "en": { "dates": "Nov 23 to Dec 10" },
-          "es": { "dates": "23 nov al 10 dic" }
+          "en": {
+            "dates": "Nov 23 to Dec 10"
+          },
+          "es": {
+            "dates": "23 nov al 10 dic"
+          }
         },
         {
           "id": "nov21-dec3",
@@ -102,8 +81,12 @@
           "days": 13,
           "normal_clp": 2860000,
           "deal_clp": 2665000,
-          "en": { "dates": "Nov 21 to Dec 3" },
-          "es": { "dates": "21 nov al 3 dic" }
+          "en": {
+            "dates": "Nov 21 to Dec 3"
+          },
+          "es": {
+            "dates": "21 nov al 3 dic"
+          }
         },
         {
           "id": "nov23-dec3",
@@ -113,8 +96,12 @@
           "days": 11,
           "normal_clp": 2420000,
           "deal_clp": 2255000,
-          "en": { "dates": "Nov 23 to Dec 3" },
-          "es": { "dates": "23 nov al 3 dic" }
+          "en": {
+            "dates": "Nov 23 to Dec 3"
+          },
+          "es": {
+            "dates": "23 nov al 3 dic"
+          }
         }
       ],
       "en": {
@@ -124,7 +111,9 @@
         "route": "Round trip from Puerto Varas",
         "text": "Early summer on the Carretera Austral, before peak season: long days and quiet roads. With 18 or 20 days you can reach Coyhaique, Cerro Castillo and the Marble Caves and still drive back at an easy pace.",
         "note": "Options close as they get booked.",
-        "wa_what": "Nomads M, round trip from Puerto Varas"
+        "wa_what": "Nomads M, round trip from Puerto Varas",
+        "pickup": "Puerto Varas",
+        "dropoff": "Puerto Varas"
       },
       "es": {
         "tag": "Fechas liberadas",
@@ -133,7 +122,9 @@
         "route": "Retiro y entrega en Puerto Varas",
         "text": "El comienzo del verano en la Carretera Austral, antes de la temporada alta: días largos y caminos tranquilos. Con 18 o 20 días alcanzas a llegar hasta Coyhaique, Cerro Castillo y las Capillas de Mármol, y volver con calma.",
         "note": "Las opciones se van cerrando a medida que se reservan.",
-        "wa_what": "Nomads M, retiro y entrega en Puerto Varas"
+        "wa_what": "Nomads M, retiro y entrega en Puerto Varas",
+        "pickup": "Puerto Varas",
+        "dropoff": "Puerto Varas"
       }
     }
   ]
