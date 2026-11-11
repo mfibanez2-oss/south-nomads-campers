@@ -40,54 +40,8 @@
       "id": "m-pv-nov-dec",
       "status": "available",
       "camper": "nomads-m",
-      "spots_total": 2,
       "image": "shared/img/nomads-m/exterior-front.jpg",
       "options": [
-        {
-          "id": "nov21-dec10",
-          "status": "available",
-          "pickup_date": "2026-11-21",
-          "dropoff_date": "2026-12-10",
-          "days": 20,
-          "normal_clp": 4180000,
-          "deal_clp": 3780000,
-          "en": {
-            "dates": "Nov 21 to Dec 10"
-          },
-          "es": {
-            "dates": "21 nov al 10 dic"
-          }
-        },
-        {
-          "id": "nov23-dec10",
-          "status": "available",
-          "pickup_date": "2026-11-23",
-          "dropoff_date": "2026-12-10",
-          "days": 18,
-          "normal_clp": 3762000,
-          "deal_clp": 3402000,
-          "en": {
-            "dates": "Nov 23 to Dec 10"
-          },
-          "es": {
-            "dates": "23 nov al 10 dic"
-          }
-        },
-        {
-          "id": "nov21-dec3",
-          "status": "available",
-          "pickup_date": "2026-11-21",
-          "dropoff_date": "2026-12-03",
-          "days": 13,
-          "normal_clp": 2860000,
-          "deal_clp": 2665000,
-          "en": {
-            "dates": "Nov 21 to Dec 3"
-          },
-          "es": {
-            "dates": "21 nov al 3 dic"
-          }
-        },
         {
           "id": "nov23-dec3",
           "status": "available",
