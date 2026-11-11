@@ -108,7 +108,7 @@ function renderDeal(deal, lang, number, today) {
   let priceBlock = '';
   if (options) {
     priceBlock = `
-      <p class="deal-choose">${ui.chooseDates}</p>
+      ${options.length > 1 ? `<p class="deal-choose">${ui.chooseDates}</p>` : ''}
       <div class="deal-options" role="radiogroup">
         ${options.map((o) => {
           const sold = o.status === 'sold';
